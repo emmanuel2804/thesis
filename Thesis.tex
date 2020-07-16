@@ -1,0 +1,51 @@
+\documentclass[11pt,oneside]{uhthesis}
+\usepackage{subfigure}
+\usepackage[linesnumbered,lined,titlenumbered,ruled]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{mathpazo}
+\usepackage{float}
+
+%\floatstyle{ruled}
+%\restylefloat{table}
+
+\renewcommand{\tablename}{Tabla}
+%\dontprintsemicolon
+
+\title{Sistema de detección de intrusos en una red utilizando redes neuronales}
+\author{Emmanuel de la Rosa Pita}
+\advisor{Ing. Magdiel Vicet Morejón}
+\degree{Licenciado en Ciencia de la Computación}
+\faculty{Facultad de Matemática y Computación}
+\date{Julio de 2020}
+\logo{Graphics/uhlogo}
+\makenomenclature
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\diff}[1]{\ensuremath{\mathrm{d}#1}}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\include{FrontMatter/Dedication}
+\include{FrontMatter/Thanks}
+\include{FrontMatter/SupervisorOpinion}
+\include{FrontMatter/Abstract}
+\include{FrontMatter/Contents}
+
+\mainmatter
+	
+\include{MainMatter/Introduction}
+\include{MainMatter/Background}
+% \include{MainMatter/Main}
+\include{MainMatter/Results}
+
+\backmatter
+
+\include{BackMatter/Conclusions}
+\include{BackMatter/Bibliography}
+
+\end{document}
