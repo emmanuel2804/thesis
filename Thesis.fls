@@ -265,10 +265,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplro8t.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.tex
@@ -278,6 +275,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplro8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplro8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
@@ -290,8 +290,6 @@ INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusio
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.tex
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.bbl
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.bbl
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
