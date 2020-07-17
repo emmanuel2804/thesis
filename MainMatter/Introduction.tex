@@ -5,10 +5,43 @@
 \addcontentsline{toc}{chapter}{Introducción}
 %===================================================================================
 
-\subsection*{Objetivos}
+% \subsection*{Objetivos}
 
-\subsection*{Contribuciones}
+% \subsection*{Contribuciones}
 
-\section*{Organización de la Tesis}
+% \section*{Organización de la Tesis}
 
+Hoy en día las redes de computadoras han cobrado un gran auge, el ejemplo más latente es el propio internet. Su crecimiento es tan alto que se estima que en 2019 el 53.6\% de la población mundial tenía acceso a este servicio [acceso a internet]. La informatización ha sido un campo que ha ido de la mano junto a las redes, llevando al mundo digital servicios como los bancarios, la telefonía, el correo, entre otros muchos. Con la unión de ellos es posible que personas que están muy lejos geográficamente puedan intercambiar cualquier información o realizar pagos sin la necesidad de tener dinero físico. Es evidente la importancia del contenido que viaja por las redes en nuestros tiempos y su delicadeza por lo que la seguridad es primordial.
+
+Por el rápido crecimiento del internet y la alta demanda por parte de la población, existen diversos equipos para la expansión de este. Esta diversidad causa muchas vulnerabilidades que pueden poner en riesgo la información que viaja por las redes. También la propia estructura descentralizada del internet implica que no exista un alto control sobre este y ello atenta contra la seguridad de los usuarios. Por estas razones cada día surgen nuevas amenazas lo que dificulta su detección.
+
+Los expertos están al tanto de estos problemas y son muchas las empresas que trabajan para eliminar o disminuir las vulnerabilidades existentes. Por lo antes mencionado, no es sencillo enfrentar el problema debido a su estructura. Al poseer un conjunto infinito de posibles errores y formas de ataque, no se puede resolver el problema con algoritmos que no se puedan adaptar a nuevas condiciones. Entre las soluciones, han surgido ideas que utilizan los algoritmos más novedosos de inteligencia artificial.
+
+Una de las formas más efectivas de luchar contra los ataques en redes es colocando un Sistema de Detección de Intrusos [ids] (IDS por sus siglas en inglés, Intrusion Detection System) junto con un firewall [firewall], uniendo la detección inteligente de uno y el poder de bloqueo del otro. En dependencia del tipo de red el sistema puede ser colocado en hardwares especializados, como switch [switch], routers [routers], junto al equipo encargado de realizar la función de puerta de enlace del sistema [puerta de enlace],  etc., debido a que por estos puntos pasa la mayoría de la información de la red. En el caso de los hardwares especializados, se tiene equipos con bajo poder de cómputo que tiene que analizar a gran velocidad todo el tráfico de la red, obligando a que el software sea lo más ligero y eficiente posible.
+
+Los datos delicados que viajan por las redes necesitan de una elevada protección, de no llevarse a cabo un proyecto a gran escala que incorpore algoritmos inteligentes para la detección de intrusos pueden ocurrir daños irreversibles [amenazas irreversibles] a la economía, a la sociedad, entre otros aspectos de nivel mundial. No se conoce cuál es la próxima amenaza ni que tan grave pueda ser. Detener a un atacante antes de que comprometa la seguridad de toda una red es clave, y más cuando se viven tiempos en los que todo está conectado. Algunas de las ventajas de tener el IDS adecuado es evitar costos innecesarios, crear parches de seguridad a tiempo, no se tiene que cambiar la estructura de la red para su funcionamiento, entre otros. En particular, el IDS que aquí se propone utiliza una serie de algoritmos de aprendizaje de máquinas (machine learning [machine learning]). En su fase de entrenamiento requiere un alto poder de cómputo pero a la hora de ejecutar su trabajo es muy efectivo y eficiente.
+
+\subsection*{Problema general}
+¿Se podrá obtener un algoritmo capaz de detener todos los posibles intrusos de una red o una cantidad lo suficientemente buena?
+
+\subsection*{Problemas específicos}
+Cuando se utilizan algoritmos de aprendizaje de máquinas, en algunos casos, se pueden obtener resultados falso positivo o falso negativo; para este problema en específico, un ejemplo sería que el sistema seleccione un paquete de red como intruso y que no lo sea o viceversa, respectivamente. Cada autor, según sus necesidades, decide darle mayor importancia a uno de estos problemas o tratarlos por igual. Un ejemplo puede ser si el sistema se está implementado en una red que navega información de alta seguridad, es mejor que no pasen paquetes, aunque no sean intrusos, antes de que pase alguno que si lo sea. Existen varios algoritmos que se pueden aplicar por lo que la elección de uno no es tarea fácil; cada uno tiene sus debilidades y ventajas por lo que escoger una métrica [metrica] para medir el más correcto no es trivial.
+
+\subsection*{Objetivos generales}
+En esta tesis se propone utilizar métodos de aprendizaje de máquinas en un IDS. También explorar los resultados obtenidos de diversos experimentos y escoger el mejor algoritmo según las especificaciones del problema.
+
+\subsection*{Objetivos específicos}
+\begin{itemize}
+    \item Entrenar con un conjunto de datos definido los algoritmos.
+    \item Analizar los resultados de los métodos estadísticos.
+    \item Validar si existe algún grado significativo.
+    \item Analizar cual método brinda mejores resultados.
+    \item Buscar un conjunto de datos que abarque una cantidad considerable de ataques para el entrenamiento de los algoritmos.
+\end{itemize}
+
+\subsection*{Justificación}
+Por todo lo antes mencionado, queda clara la necesidad de implementar un sistema de esta envergadura. Existen diversos softwares para la recopilación de los datos que van ayudar en esta tarea y es fácil obtener un gran conjunto de datos (aunque no de calidad óptima). Se utilizará como lenguaje de programación Python por su cualidad de software libre [python software libre] y por ofrecer diversos módulos con la mayoría de los algoritmos implementados lo que evita ser redundante.
+
+\subsection*{Limitaciones}
+La mayoría de métodos que se van a utilizar necesitan de un gran poder de cómputo para su entrenamiento [cómputo para entrenar], limitando el número de pruebas. Por otra parte, los equipos objetivos para la implementación carecen de hardwares potentes lo que reduce las opciones de algoritmos más potentes y complejos. Para un entrenamiento más refinado se requiere también un conjunto de datos que contenga, de ser posible, todos los ataques existentes hasta el momento [dataset completo]; como esto no es posible, o sumamente complicado, los algoritmos no van a poder tener un conocimiento lo suficientemente amplio, implicando una menor precisión una vez se lleve a cabo su implementación.
 % El capítulo ...

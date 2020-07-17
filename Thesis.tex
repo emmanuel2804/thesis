@@ -1,4 +1,4 @@
-\documentclass[11pt,oneside]{uhthesis}
+\documentclass[11pt, oneside]{uhthesis}
 \usepackage{subfigure}
 \usepackage[linesnumbered,lined,titlenumbered,ruled]{algorithm2e}
 \usepackage{amsmath}
@@ -6,6 +6,8 @@
 \usepackage{amsbsy}
 \usepackage{mathpazo}
 \usepackage{float}
+\usepackage{listings}
+
 
 %\floatstyle{ruled}
 %\restylefloat{table}
@@ -37,10 +39,12 @@
 \include{FrontMatter/Contents}
 
 \mainmatter
-	
+    
+\setcounter{secnumdepth}{0}
+
 \include{MainMatter/Introduction}
-\include{MainMatter/Background}
-% \include{MainMatter/Main}
+\include{MainMatter/IDS}
+\include{MainMatter/Dataset}
 \include{MainMatter/Results}
 
 \backmatter

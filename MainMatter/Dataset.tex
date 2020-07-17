@@ -1,0 +1,81 @@
+%===================================================================================
+% Chapter: Dataset
+%===================================================================================
+\chapter{Análisis del conjunto de datos}\label{chapter:dataset}
+\addcontentsline{toc}{chapter}{Análisis del conjunto de datos}
+%===================================================================================
+
+En el proceso de entrenamiento y prueba de los algoritmos de aprendizaje de maquina el conjunto de datos utilizados es de gran importancia, por eso escoger uno lo suficientemente bueno no es tarea fácil. El conjunto KDDCup99 fue elaborado por el MIT Lincoln Lab patrocinado por DARPA en un escenario simulado donde realizaban ataques a la base de las fuerzas aéreas, lo cual tuvo una duración de 9 semanas [referencias]. Los datos fueron analizados y separados según el tipo de ataque o tráfico no malicioso de la red. Es uno de los conjuntos públicos disponibles que contiene ataques actuales y más utilizados para la construcción de IDS, lo que facilita la comparación de diferentes trabajos.
+
+\section{Descripción del conjunto de datos}
+El conjunto de datos KDDCup99 posee aproximadamente 5 millones de datos los que se dividen en 5 clases:
+
+\begin{itemize}
+    \item Normal: tráfico común que navega por la red como puede ser el acceso a un sitio web o el envío de archivos no maliciosos.
+    \item Negación de Servicios (DoS): esto es un ataque que ocupa gran parte del poder de cómputo o la memoria haciendo así que otras peticiones no puedan ser atendidas.
+    \item Probing: un atacante escanea la red para ganar información que pueda explotar en el momento de infiltrarse en esta.
+    \item Ataque remoto a un equipo local (R2L): el atacante envía paquetes a la red con el objetivo de explotar alguna vulnerabilidad disponible y ganar acceso local.
+    \item User to Root (U2R): el atacante accede a la red desde una cuenta de usuario común y explota las vulnerabilidades existentes para ganar acceso como administrador en el sistema.
+\end{itemize}
+
+De igual forma, cada paquete contiene 41 características que pueden ser continuas o discretas. Estas están divididas en 4 categorías:
+
+\begin{itemize}
+    \item Características básicas que están derivadas de los encabezados de los paquetes sin inspeccionar la payload information.
+    \item Características de contenido para los cuales se utiliza el conocimiento del dominio para evaluar el payload de los paquetes TCP originales.
+    \item Características basadas en el tiempo de tráfico.
+    \item Características basadas en el tráfico del host.
+\end{itemize}
+
+Este conjunto de datos tiene algunos problemas como el contenido de datos redundantes causando que los algoritmos de aprendizaje tengan una inclinación por los datos más frecuentes, el número de entradas para elaborar un conjunto de test puede variar en cada trabajo dado que el conjunto de datos no está separado, entre otros. Para eliminar algunos de estos errores se elaboró el conjunto NSL-KDD con un total de 1.1 millones de datos. A pesar de los esfuerzos, este aún sufre de algunos problemas tratados por McHugh [0] y no es una representación perfecta del contenido real en las redes. Por la falta de conjuntos de datos públicos, este puede ser un buen medidor para ayudar a las diferentes investigaciones y poderlas comparar entre sí. 
+
+En adición, los datos contienen un nivel de dificultad el cual corresponde a la cantidad de algoritmos de aprendizaje que clasificó el dato correctamente. Para lograr este objetivo se entrenaron 7 algoritmos diferentes, cada uno 3 veces, y a cada dato que aceptaron se le incrementó en uno el valor de dificultad, siendo 21 el valor máximo representando el nivel de dificultad más bajo. Este consta de 8 archivos:
+
+\begin{itemize}
+    \item KDDTrain+.arff : el conjunto de entrenamiento completo con los datos clasificados en normal y anómalos.
+    \item KDDTrain+.txt : el conjunto de entrenamiento completo con los datos clasificados según el tipo de ataque y el nivel de dificultad.
+    \item KDDTrain+\_20Percent.arff : subconjunto de 20\% del archivo KDDTrain+.arff.
+    \item KDDTrain+\_20Percent.txt : subconjunto de 20\% del archivo KDDTrain+.txt.
+    \item KDDTest+.arff : conjunto de test completo con los datos clasificados en normal y anómalos.
+    \item KDDTest+.txt : conjunto de test completo con los datos clasificados según el tipo de ataque y el nivel de dificultad.
+    \item KDDTest-21.arff : subconjunto de KDDTest+.arff que no contiene los datos con dificultad 21 de 21.
+    \item KDDTest-21.txt : subconjunto de KDDTest+.txt que no contiene los datos con dificultad 21 de 21.
+\end{itemize}
+
+\section{Pre procesamiento de los datos}
+Con el objetivo de optimizar el proceso de aprendizaje y los resultados obtenidos por los algoritmos de aprendizaje es necesario realizar un pre procesamiento de los datos. Este consiste en la transformar y normalizar los datos dado que existen campos con valores reales y otros con dominio definido. Para los campos con valores binarios reales no es necesario realizar ninguna transformación [referenciar].
+
+Los campos con valores reales tienen como valor mínimo el 0 por lo que el proceso de normalización consiste en buscar el valor máximo de cada campo y dividir todos los valores por este. En el caso de los campos con dominio definido, como lo es protocol\_type que sus valores pertenecen al dominio \{'tcp', 'udp', 'icmp'\}, se le asigna un valor entero a cada posible valor, igual al su indice en la lista de posibles valores, y luego se dividen entre el máximo valor que es igual a la cantidad de valores posibles menos 1. Después de estos procesos todos los campos de los datos poseen valores entre 0 y 1.
+
+\section{Selección de variables}
+Los mecanismos de selección de variables ayudan a identificar y remover las no esenciales, irrelevantes y redundantes de los datos que no influyen en la precisión de los resultados. La selección de variables es el proceso que indica cual es la mejor representación de los datos para resolver un problema determinado. Si este proceso no se aplica, puede tener un efecto negativo en la precisión de las respuestas de los modelos de predicción [referenciar].
+
+Uno de los métodos más utilizados para lograr este objetivo es el de bosques aleatorios. Este clasificador ha brindado buenos resultados para el problema en cuestión. Es un algoritmo basado en árboles que se utiliza en problemas de clasificación y ayuda a obtener la importancia de las variables en cada uno. Se puso a prueba con conjunto NSL-KDD y se eliminaron 11 variables que aportaban poca información sobre la clasificación de los datos, quedando así 30 variables para el entrenamiento de los algoritmos clasificadores.
+
+\textbf{INCOMPLETO}
+\section{Clasificación}
+En este sub-capitulo va una breve descripción de lo que es la clasificación, de que en este caso es binaria porque es lo que nos interesa
+En el proceso de clasificación primero se escogen las características más relevantes de los datos. Para ello se aplican algoritmos que dadas las diferentes clases de los datos, sepan cuales características separen mejor una clase de otra. Luego de seleccionar las características más relevantes se procede a la fase de entrenamiento de la red neuronal. Se realizan varias iteraciones para lograr un mejor aprendizaje y en cada una se comprueba con otro conjunto disjunto el comportamiento de la red.
+
+\subsection{Redes neuronales}
+Explicación de que son y cómo funcionan las redes neuronales. También porque son buenas para mi problema.
+Las redes neuronales son clasificadores supervisados, ampliamente usados en el mundo entero por sus increíbles resultados en aplicaciones donde los análisis de los datos son extremadamente difíciles o imposibles.
+
+\section{Experimentación}
+Mostrar los parámetros seleccionados y porque se escogieron esos según alguna literatura.
+
+\subsection{Análisis de reducción de dimensiones}
+Para que es útil y como mejora los resultados. Comparación de algunos algoritmos, selección del mejor.
+La selección de características en este campo es esencial, con las variables correctas se puede reducir el overfitting, mejorar el desempeño de los algoritmos y tener un mejor entendimiento sobre los procesos que generaron los datos. Random forest (RF) es un algoritmo basado en arboles ampliamente utilizado para obtener un estimado de la importancia que tiene cada característica de los datos. Consiste en la construcción de un conjunto ensemble de M árboles de decisión especializados, cada uno entrenado en un subconjunto del total de datos, escogido de modo aleatorio con reemplazo.
+[ M. A. M. Hasan, M. Nasser, S. Ahmad, and K. I. Molla, “Feature selection for intrusion detection using random forest,” Journal of information security, vol. 7, no. 03, p. 129, 2016.]
+
+\subsection{Conjunto de datos original}
+Explicar el proceso que se realizó con el dataset sin modificar. Poner los resultados obtenidos con y sin k-fold.
+El conjunto de datos NSL-KDD es ampliamente utilizado por investigadores en la elaboración de ids, parte de su popularidad se debe a las particiones que este ya posee. Este conjunto de datos posee un subconjunto de entrenamiento, con casos de ataques y otros de tráfico común, y uno de test, que de igual manera posee ataques y trafico normal, aunque en el caso de los ataques posee algunos tipos que no se encuentran en el conjunto de entrenamiento. Gracias a esto, diferentes algoritmos pueden ser comparados con un alto nivel de precisión.
+Para una mayor precisión en los resultados se utilizó el método k-fold [chollet pag87]. Este consiste en dividir el conjunto de entrenamiento en k particiones, creando k modelos idénticos y entrenando el i-esimo con las k-1 restantes mientras que se evalúan con la i-esima partición. Luego de obtener los k resultados se promedian. El valor de k escogido fue de 5 (usualmente se trabaja con 5 o 4) con 100 epochs y un tamaño de batch de 64. Al comienzo se desordenaron los datos del conjunto de entrenamiento de modo aleatorio.
+
+\subsection{Conjunto de datos modificado}
+Los altos valores de validación obtenidos anteriormente sugieren que el modelo está aprendiendo muy bien los datos que se encuentran en el conjunto de entrenamiento pero no está generalizando lo suficiente para obtener resultados similares en la fase de test. Por esta razón se decidió crear un nuevo conjunto de datos mezclando el de entrenamiento y el de test en uno solo, desordenarlo aleatoriamente, crear dos nuevas particiones de entrenamiento y test y con ellas entrenar. Con este proceso se garantiza una mejor distribución de los datos en la que los más complicados para el algoritmo pueden estar en el conjunto de entrenamiento, no solo en el de test.
+Para este proceso se unieron los conjuntos de entrenamiento y de test en uno solo, se desordeno aleatoriamente y luego se tomaron el 80\% y el 20\% de los datos para la creación de los nuevos conjuntos de entrenamiento y de test respectivamente. Para obtener una mejor aproximación al resultado real, este proceso se realizó 5 veces y en cada una de ellas se entrenó y testeo el modelo.
+
+Explicar cómo se realizó el nuevo conjunto de datos. Explicar el proceso de clasificación llevado a cabo y mostrar mejoras sobre el proceso anterior

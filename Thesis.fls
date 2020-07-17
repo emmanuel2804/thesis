@@ -1,0 +1,330 @@
+PWD /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.log
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/uhthesis.cls
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/uhthesis.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm
+INPUT /usr/share/texmf/tex/latex/lm/lmodern.sty
+INPUT /usr/share/texmf/tex/latex/lm/lmodern.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/babelbib/babelbib.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/babelbib/babelbib.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/mathpazo.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/mathpazo.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.nlo
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Thanks.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Thanks.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/SupervisorOpinion.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/SupervisorOpinion.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Abstract.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Abstract.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Contents.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Contents.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.aux
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.aux
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/babelbib/spanish.bdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/babelbib/spanish.bdf
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.pdf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Graphics/uhlogo.pdf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Graphics/uhlogo.pdf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Graphics/uhlogo.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Graphics/qrcode-tesis.pdf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Graphics/qrcode-tesis.pdf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Graphics/qrcode-tesis.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Thanks.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Thanks.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Thanks.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/SupervisorOpinion.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/SupervisorOpinion.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/SupervisorOpinion.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Abstract.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Abstract.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Abstract.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Contents.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Contents.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Contents.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7m.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7m.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7m.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7y.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7y.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7y.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7v.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7v.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7v.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplro8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplro8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplro8r.tfm
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.tex
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.bbl
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.bbl
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Thanks.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Thanks.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/SupervisorOpinion.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/SupervisorOpinion.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Abstract.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Abstract.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Contents.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Contents.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Bibliography.aux
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
