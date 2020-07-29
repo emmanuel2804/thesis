@@ -6,8 +6,6 @@
 \usepackage{amsbsy}
 \usepackage{mathpazo}
 \usepackage{float}
-\usepackage{listings}
-
 
 %\floatstyle{ruled}
 %\restylefloat{table}
@@ -26,6 +24,7 @@
 
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
 \newcommand{\diff}[1]{\ensuremath{\mathrm{d}#1}}
+% \renewcommand\thechapter{\Roman{chapter}}
 
 \begin{document}
 
@@ -40,7 +39,7 @@
 
 \mainmatter
     
-\setcounter{secnumdepth}{0}
+% \setcounter{secnumdepth}{0}
 
 \include{MainMatter/Introduction}
 \include{MainMatter/IDS}
@@ -50,6 +49,9 @@
 \backmatter
 
 \include{BackMatter/Conclusions}
-\include{BackMatter/Bibliography}
+% \include{BackMatter/Bibliography}
+\bibliographystyle{plain}
+\bibliography{BackMatter/referencias.bib}
+
 
 \end{document}
