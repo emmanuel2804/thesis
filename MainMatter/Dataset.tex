@@ -2,7 +2,7 @@
 % Chapter: Dataset
 %===================================================================================
 \chapter{Análisis del conjunto de datos}\label{chapter:dataset}
-\addcontentsline{toc}{chapter}{Análisis del conjunto de datos}
+% \addcontentsline{toc}{chapter}{Análisis del conjunto de datos}
 %===================================================================================
 
 En el proceso de entrenamiento y prueba de los algoritmos de aprendizaje de maquina el conjunto de datos utilizados es de gran importancia, por eso escoger uno lo suficientemente bueno no es tarea fácil. El conjunto KDDCup99 fue elaborado por el MIT Lincoln Lab patrocinado por DARPA en un escenario simulado donde realizaban ataques a la base de las fuerzas aéreas, lo cual tuvo una duración de 9 semanas [referencias]. Los datos fueron analizados y separados según el tipo de ataque o tráfico no malicioso de la red. Es uno de los conjuntos públicos disponibles que contiene ataques actuales y más utilizados para la construcción de IDS, lo que facilita la comparación de diferentes trabajos.
@@ -57,9 +57,6 @@ Uno de los métodos más utilizados para lograr este objetivo es el de bosques a
 En este sub-capitulo va una breve descripción de lo que es la clasificación, de que en este caso es binaria porque es lo que nos interesa
 En el proceso de clasificación primero se escogen las características más relevantes de los datos. Para ello se aplican algoritmos que dadas las diferentes clases de los datos, sepan cuales características separen mejor una clase de otra. Luego de seleccionar las características más relevantes se procede a la fase de entrenamiento de la red neuronal. Se realizan varias iteraciones para lograr un mejor aprendizaje y en cada una se comprueba con otro conjunto disjunto el comportamiento de la red.
 
-\subsection{Redes neuronales}
-Explicación de que son y cómo funcionan las redes neuronales. También porque son buenas para mi problema.
-Las redes neuronales son clasificadores supervisados, ampliamente usados en el mundo entero por sus increíbles resultados en aplicaciones donde los análisis de los datos son extremadamente difíciles o imposibles.
 
 \section{Experimentación}
 Mostrar los parámetros seleccionados y porque se escogieron esos según alguna literatura.

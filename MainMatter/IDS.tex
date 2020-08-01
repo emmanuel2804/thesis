@@ -2,7 +2,7 @@
 % Chapter: IDS
 %===================================================================================
 \chapter{Sistema de Detección de Intrusos}\label{chapter:ids}
-\addcontentsline{toc}{chapter}{Sistema de Detección de Intrusos}
+% \addcontentsline{toc}{chapter}{Sistema de Detección de Intrusos}
 %===================================================================================
 
 Entre los años 1984 y 1986, Dorothy Denning y Peter Neumann desarrollaron un primer modelo de IDS \cite{denning1985requirements} para proteger los sistemas de cómputos. Pertenecen a la rama de la computación de las redes aunque en los últimos tiempos se han aplicado para su creación técnicas de distintas disciplinas como son algunas de inteligencia artificial. En la última década se han logrado avances en esta tecnología, obteniendo mejores resultados. A pesar de ello no se ha logrado un sistema con una efectividad lo suficientemente alta y aún es una línea de investigación activa. Se considera que estos sistemas tienen una gran importancia, ya sea económica o social, al proteger los datos delicados que viajan por la red y mantener la privacidad de cada usuario. Entre las técnicas de inteligencia artificial más utilizadas se encuentra el aprendizaje de máquinas.
@@ -49,7 +49,44 @@ Los sistemas de prevención de intrusos se diferencian de los sistemas de detecc
 
 % TODO:
 \section{Redes neuronales}
-explicación detallada del funcionamiento y los diferentes tipos de redes neuronales que existen
+% Historia y muela
+
+Las redes neuronales artificiales (RNA o ANN por sus siglas en inglés) son algoritmos de la rama de la inteligencia artificial que dado un conjunto de datos de ejemplo, ofrecen una función, sin importar el dominio de los valores de entrada y de salida, capaz de aproximar el resultado. Han brindado resultados excelentes en el reconocimiento de escritura a mano, palabras en audios y rostros.
+
+Los primeros acercamientos a esta nueva tecnología fueron a principios de los a\~nos 1950 inspirados en los sistemas de aprendizaje biológicos. Son un conjunto de unidades simples, conectadas de manera densa entre ellas, donde cada unidad toma un real (que puede ser o no la salida de otra) y produce como resultado otro valor real (que puede convertirse en la entrada de otra unidad). El cerebro humano se estima que posee una red neuronal con $10^{11}$ unidades densamente conectadas, cada una de ellas conectadas con otras $10^{4}$ en promedio. La velocidad de comunicación entre una neurona y otra se encuentra en el orden de $10^{-3}$ segundos, por otra parte, las computadoras poseen una velocidad de $10^{-10}$ segundos. Los humanos son capaces de tomar complejas decisiones sorprendentemente rápido. Un ejemplo de esto es el reconocimiento de rostros, a un humano promedio le toma aproximadamente $10^{-1}$ segundo reconocer visualmente a su madre. Teniendo en cuenta la velocidad de comunicación entre neuronas, este proceso no excede unos cientos de pasos. Esto ha llevado a la comunidad científica a pensar que el sistema neuronal biológico es capaz de realizar tareas de procesamiento de información de manera altamente paralelas distribuidas en varias neuronas. Una de las motivaciones principales de es lograr un sistema capaz de hacer procesos altamente paralelos en representaciones distribuidas \cite{brown1990learning,churchland1992computational,mitchell1997machine}.
+
+Después de los primeros pasos en la creación de las redes neuronales, los científicos se encontraron con el problema de entrenar grandes arquitecturas de una forma eficiente. A mediados de los a\~nos 1980, varios estudios de diferentes partes del mundo, descubrieron de forma independiente el algoritmo de propagación hacia atrás, el cual utiliza el método de optimizaci\'on de descenso por gradiente para entrenar cadenas de operaciones param\'etricas. Unos de los pioneros en utilizar estas técnicas con grandes éxitos fueron los laboratorios Bell, cuando Yann LeCun utilizó las ideas iniciales de las redes convolucionales y la propagación hacia atrás. Como resultado obtuvieron una red que podía reconocer dígitos escritos a mano con alta efectividad, la cual nombraron LeNet \cite{lecun1995comparison}, y fue utilizada por el Servicio Postal de los Estados Unidos en la decada de 1990. A pesar de que las redes neuronales artificiales fueron inspiradas por el sistema biológico, ambas poseen características que las diferencian.
+
+% diseño basado en hardware
+
+\subsection{Funcionamiento}
+% funcion de red
+% el aprendizaje
+% la eleccion de una funcion de costo
+% paradigma de aprendizajes
+    % supervisado
+    % no supervisado
+    % por refuerzo
+% tipo de entrada
+
+% algoritmos de aprendizaje
+
+\subsection{util para ids}
+% las ann son especiales en casos de:
+    % la entrada es representada por varios pares de atributos
+    % la salida de la funcion objetivo puede ser de cualquier tipo
+    % los ejemplos de entrenamiento pueden contener errores
+    % largos tiempos de entrenamiento son aceptables
+    % se requiere de una rapida evaluacion de la funcion objetivo aprendida
+    % no es importante que los humanos entiendan la funcion objetivo aprendida
+
+% aplicaciones
+
+% potencia de calculo
+
+% critica
+
+% clases y tipos
 
 \section{Conjunto de datos y características}
 Distintas investigaciones se han enfocado en realizar sistemas de detección de intrusos teniendo como fuente de datos NSL-KDD. En 1998 la Agencia de Proyectos de Investigación Avanzados de Defensa, más conocida por su acrónimo DARPA, recopiló y almacenó la información del tráfico de una red que nombró KDDCup99 llegando a ser uno de los conjuntos de datos públicos que contiene diferentes ataques vigentes en la actualidad y más utilizados por la comunidad científica. NSL-KDD fue diseñado para resolver varios de los problemas existentes en el conjunto original como son la información redundante, tanto en los conjuntos de entrenamiento como de prueba, y la cantidad de datos en cada subconjunto es razonable, lo cual hace comparable y consistentes los resultados de cualquier trabajo y evita tener que escoger un subconjunto aleatorio para los diferentes procesos.
