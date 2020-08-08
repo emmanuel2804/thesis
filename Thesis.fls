@@ -300,8 +300,11 @@ INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/FrontMatter/Dedication.aux
