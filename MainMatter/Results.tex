@@ -4,3 +4,44 @@
 \chapter{Resultados}\label{chapter:results}
 % \addcontentsline{toc}{chapter}{Análisis del conjunto de datos}
 %===================================================================================
+
+% introducción
+Para iniciar la experimentación fue necesario normalizar los datos y luego se realizaron tres fases de experimentos. En la primera fase se probaron varias arquitecturas de red con el conjunto de datos original. Para la segunda fase se analizó la reducción de dimensiones utilizando el algoritmo de \'arboles aleatorios. Como ultima fase se modificó el conjunto de datos original para obtener uno nuevo y probar los algoritmos anteriores.
+
+\section{Procesamiento de los datos}
+% proceso de limpieza de datos
+El conjunto de datos posee 42 características por cada entrada, las primeras 41 forman parte de la descripción del paquete de red y la última es la clasificación de este. Esta ultima puede variar, en los archivos con la extensión arff la clase es normal o anómalo, por otro lado, en los archivos txt, si el paquete es de un ataque, se especifica el tipo de ataque. Como se mencionó anteriormente, este documento se centra en la clasificación de los datos en normal y anómalos.
+
+Para el proceso de normalización se investigaron todos los datos en los conjuntos de entrenamiento y de prueba. Las características de cada uno pueden ser de dos tipos, numéricas con valores reales o cualitativas con valores predefinidos. En el caso de las variables numéricas se escalaron todos sus valores al rango [0, 1] buscando el valor mínimo y máximo:
+\[A_{i} = \frac{A_{i} - Min_{i}}{Max_{i} - Min_{i}}\] 
+donde $i$ es la $i$-\'esima característica, $A_{i}$ es el vector de los valores de la característica de cada dato y $Min_{i}$, $Max_{i}$ son los valores mínimo y máximo de la característica respectivamente. Por otra parte, en las variables cualitativas se le asignó un índice a cada uno de los posibles valores comenzando por el 0, luego para escalarlos se dividió cada uno por la cantidad de posibles valores menos 1 para así obtener los datos en el rango [0, 1]:
+\[A_{i} = \frac{index(A_{i})}{len(i) - 1}\]
+
+\section{Modelos básicos}
+% arquitecturas de redes simples con el dataset original
+% 4x50                  CT-75.1  21T-52.76
+% 64-128-64-32-16       CT-75.4  21T-53.25
+% 64-128-128-64-32-16   CT-77.91 21T-58
+Primeros resultados con diferentes arquitecturas de redes neuronales, modificando la cantidad de capas y el numero de neuronas en alguna de estas
+
+\section{Selección de características}
+% selección de features
+Explicación y muestreo de resultados de la aplicación del algoritmo Random Forest para la extracción de las características de mayor importancia para la clasificación
+
+% 30 features           CT-79.87 21T-61.85  76.79  55.90
+% 64 batch size         CT-78.33 21T-58.82  77.07  56.43  77.13  56.53
+
+\section{Transformación del conjunto de datos}
+% transformación del conjunto de datos
+Unificación de los conjuntos de datos disjuntos del dataset original para la posterior creación de uno nuevo el cual contenga elementos de todas las dificultades
+
+\subsection{Modificación del valor de aprendizaje}
+Variación del learning rate en el proceso de aprendizaje y búsqueda para el mejor resultado
+
+\subsection{Validación por partes}
+Explicación del algoritmo de K-fold para una aproximación a un resultado mas real
+
+% k-fold validation
+% búsqueda del learning rate
+
+% TODO: demostrar o probar porque con el dataset transformado no es necesario volver a probar los primeros modelos que eran mas malos con el dataset original
