@@ -22,7 +22,44 @@ donde $i$ es la $i$-\'esima característica, $A_{i}$ es el vector de los valores
 % 4x50                  CT-75.1  21T-52.76
 % 64-128-64-32-16       CT-75.4  21T-53.25
 % 64-128-128-64-32-16   CT-77.91 21T-58
-Primeros resultados con diferentes arquitecturas de redes neuronales, modificando la cantidad de capas y el numero de neuronas en alguna de estas
+Para un primer acercamiento al problema y para trazar una línea base superior al 50\% del algoritmo aleatorio se construyeron redes neuronales que entrenaron y se evaluaron con el conjunto de datos original. La primera arquitectura a probar posee 4 capaz ocultas y cada una con 50 neuronas:
+\begin{verbatim}
+    from keras import models, layers
+
+    model = models.Sequential()
+
+    # Input - Layer
+    model.add(layers.Dense(50, input_dim=(41), 
+        activation='relu', name='input_layer'))
+
+    # Hidden - Layers
+    model.add(layers.Dropout(0.5))
+    model.add(layers.Dense(50, activation='relu', 
+        name='hidden_layer_1'))
+    model.add(layers.Dropout(0.5))
+    model.add(layers.Dense(50, activation='relu', 
+        name='hidden_layer_2'))
+    model.add(layers.Dropout(0.5))
+    model.add(layers.Dense(50, activation='relu', 
+        name='hidden_layer_3'))
+
+    # Output - Layer
+    model.add(layers.Dense(1, activation='sigmoid', 
+        name='output_layer'))
+\end{verbatim}
+
+En esta arquitectura, como en las restantes, se utilizó como función de activación en las capaz intermedias $relu$:
+\[f(x)=max(0,x)\]
+esta función es muy eficiente por si sencillez por lo que agiliza el proceso de entrenamiento. Por otra parte, en la capa de salida es necesaria la función $sigmoid$
+\[f(x) = \frac{1}{1 + e^{-x}}\]
+que tiene como resultado valores entre 0 y 1, dado que los datos de entrenamiento fueron modificados y los casos de tráfico anómalo tienen valor 1 y los normales valor 0 en su campo de clasificación, tomando los casos $< 0.5$ como tráfico normal y los $\geq 0.5$ tráfico anómalo
+
+Este trabajo se centra en explorar los resultados de utilizar redes neuronales simples en el proceso de detección de intrusos, por lo que se analiza el comportamiento de los paquetes que viajan en la red por separado. Por lo antes mencionado, todos los modelos a probar utilizan capaz completamente conectadas o capaz densas como también se les conocen. La salida de estas capaz está representada por la siguiente función:
+\[output = activation(dot(input, kernel) + bias)\]
+donde $activation$ es la función de activación escogida, $dot$ es el producto punto entre dos vectores, $input$ es el vector con los valores de entrada, $kernel$ son los valores de peso de la red y $bias$ representa un valor de sesgo utilizado en los algoritmos de aprendizaje de máquina para optimizar los modelos.
+
+% TODO: poner gráficas de los resultados de estos primeros modelos y explicar la función de optimizacion, la de perdida y las métricas
+% Primeros resultados con diferentes arquitecturas de redes neuronales, modificando la cantidad de capas y el numero de neuronas en alguna de estas
 
 \section{Selección de características}
 % selección de features

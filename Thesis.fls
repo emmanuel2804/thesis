@@ -302,6 +302,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.tex
@@ -342,9 +345,12 @@ INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.out
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.brf
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
