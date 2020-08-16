@@ -63,8 +63,26 @@ donde $activation$ es la función de activación escogida, $dot$ es el producto 
 
 \section{Selección de características}
 % selección de features
-Explicación y muestreo de resultados de la aplicación del algoritmo Random Forest para la extracción de las características de mayor importancia para la clasificación
+\begin{figure}[b]
+    \includegraphics[width=\linewidth]{Images/dst_host_count-dst_host_diff_srv_rate.png}
+    \caption{Gráfico que relaciona dos características de los datos. Los puntos rojos son anomalías y los azules tráfico común.}
+    \label{fig:entropy}
+\end{figure}
+Para una mejor comprensión de los datos se realizaron multiples gráficas en las que se muestran una relación de dos de las características y datos de tráfico normal y anómalo. En la mayoría de estas existe una gran dispersión de los datos y no se observa un par de características evidentes que separen al conjunto como se puede observar en \ref{fig:entropy}. Por otra parte si se observan algunas que aportan muy poca o nada de información, esto se evidencia en \ref{fig:redundant}. En estos casos se tiene la característica $dst\_host\_diff\_srv\_rate$ que en la figura \ref{fig:entropy} si influye en la clasificación de los datos, sin embargo, en \ref{fig:redundant}, cualquiera sea el valor que tome los resultados no varían mucho.
 
+\begin{figure}[t]
+    \centering
+    \subfigure{\label{fig:redundant_a}\includegraphics[width=.45\linewidth]{Images/dst_bytes-dst_host_diff_srv_rate.png}}
+    \subfigure{\label{fig:redundant_b}\includegraphics[width=.45\linewidth]{Images/num_outbound_cmds-dst_host_diff_srv_rate.png}}
+
+    \caption{Característica innecesarias en los datos.}
+    \label{fig:redundant}
+\end{figure}
+
+Las características redundantes hacen que a los modelos les tome más llevar a cabo la fase de entrenamiento o pueden causar un sobreajuste (\textit{overfitting}) que puede afectar la generalización, entre otros problemas\cite{tuv2009feature}.
+
+Explicación y muestreo de resultados de la aplicación del algoritmo Random Forest para la extracción de las características de mayor importancia para la clasificación
+% TODO: explicar la selección de parámetros para el random forest, poner las gráficas de la importancia de los features y mostrar resultados utilizando menos features.
 % 30 features           CT-79.87 21T-61.85  76.79  55.90
 % 64 batch size         CT-78.33 21T-58.82  77.07  56.43  77.13  56.53
 
