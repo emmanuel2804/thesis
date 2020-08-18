@@ -7,7 +7,7 @@
 
 En el proceso de entrenamiento y prueba de los algoritmos de aprendizaje de maquina el conjunto de datos utilizados es de gran importancia, por eso escoger uno lo suficientemente bueno no es tarea fácil. El conjunto KDDCup99 fue elaborado por el MIT Lincoln Lab patrocinado por DARPA en un escenario simulado donde realizaban ataques a la base de las fuerzas aéreas, lo cual tuvo una duración de 9 semanas [referencias]. Los datos fueron analizados y separados según el tipo de ataque o tráfico no malicioso de la red. Es uno de los conjuntos públicos disponibles que contiene ataques actuales y más utilizados para la construcción de IDS, lo que facilita la comparación de diferentes trabajos.
 
-\section{Descripción del conjunto de datos}
+\section{Descripción del conjunto de datos}\label{section:dataset_description}
 El conjunto de datos KDDCup99 posee aproximadamente 5 millones de datos los que se dividen en 5 clases:
 
 \begin{itemize}
@@ -27,6 +27,7 @@ De igual forma, cada paquete contiene 41 características que pueden ser continu
     \item Características basadas en el tráfico del host.
 \end{itemize}
 
+% TODO: poner bien referencia a de los errores del dataset y mejorar la redacción antes de enumerar los archivos(parece que los 8 archivos son solo de los niveles de dificultad)
 Este conjunto de datos tiene algunos problemas como el contenido de datos redundantes causando que los algoritmos de aprendizaje tengan una inclinación por los datos más frecuentes, el número de entradas para elaborar un conjunto de test puede variar en cada trabajo dado que el conjunto de datos no está separado, entre otros. Para eliminar algunos de estos errores se elaboró el conjunto NSL-KDD con un total de 1.1 millones de datos. A pesar de los esfuerzos, este aún sufre de algunos problemas tratados por McHugh [0] y no es una representación perfecta del contenido real en las redes. Por la falta de conjuntos de datos públicos, este puede ser un buen medidor para ayudar a las diferentes investigaciones y poderlas comparar entre sí. 
 
 En adición, los datos contienen un nivel de dificultad el cual corresponde a la cantidad de algoritmos de aprendizaje que clasificó el dato correctamente. Para lograr este objetivo se entrenaron 7 algoritmos diferentes, cada uno 3 veces, y a cada dato que aceptaron se le incrementó en uno el valor de dificultad, siendo 21 el valor máximo representando el nivel de dificultad más bajo. Este consta de 8 archivos:

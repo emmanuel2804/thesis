@@ -305,19 +305,25 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_bytes-dst_host_diff_srv_rate.png
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_bytes-dst_host_diff_srv_rate.png
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_bytes-dst_host_diff_srv_rate.png
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/num_outbound_cmds-dst_host_diff_srv_rate.png
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/num_outbound_cmds-dst_host_diff_srv_rate.png
-INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/num_outbound_cmds-dst_host_diff_srv_rate.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_loss.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_loss.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_loss.png
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_bytes-dst_host_diff_srv_rate.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_bytes-dst_host_diff_srv_rate.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_bytes-dst_host_diff_srv_rate.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/num_outbound_cmds-dst_host_diff_srv_rate.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/num_outbound_cmds-dst_host_diff_srv_rate.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/num_outbound_cmds-dst_host_diff_srv_rate.png
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/BackMatter/Conclusions.tex
