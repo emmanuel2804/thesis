@@ -263,7 +263,10 @@ OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Thesis.toc
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Introduction.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplro8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/IDS.tex
@@ -292,7 +295,6 @@ INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.t
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -305,14 +307,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_loss.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_loss.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_loss.png
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/dst_host_count-dst_host_diff_srv_rate.png

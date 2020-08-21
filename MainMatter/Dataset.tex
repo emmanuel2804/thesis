@@ -5,7 +5,7 @@
 % \addcontentsline{toc}{chapter}{Análisis del conjunto de datos}
 %===================================================================================
 
-En el proceso de entrenamiento y prueba de los algoritmos de aprendizaje de maquina el conjunto de datos utilizados es de gran importancia, por eso escoger uno lo suficientemente bueno no es tarea fácil. El conjunto KDDCup99 fue elaborado por el MIT Lincoln Lab patrocinado por DARPA en un escenario simulado donde realizaban ataques a la base de las fuerzas aéreas, lo cual tuvo una duración de 9 semanas [referencias]. Los datos fueron analizados y separados según el tipo de ataque o tráfico no malicioso de la red. Es uno de los conjuntos públicos disponibles que contiene ataques actuales y más utilizados para la construcción de IDS, lo que facilita la comparación de diferentes trabajos.
+En el proceso de entrenamiento y prueba de los algoritmos de aprendizaje de máquina el conjunto de datos utilizados es de gran importancia, por eso escoger uno lo suficientemente bueno no es tarea fácil. El conjunto KDDCup99 fue elaborado por el MIT Lincoln Lab patrocinado por DARPA en un escenario simulado donde realizaban ataques a la base de las fuerzas aéreas, lo cual tuvo una duración de 9 semanas [referencias]. Los datos fueron analizados y separados según el tipo de ataque o tráfico no malicioso de la red. Es uno de los conjuntos públicos disponibles que contiene ataques actuales y más utilizados para la construcción de IDS, lo que facilita la comparación de diferentes trabajos.
 
 \section{Descripción del conjunto de datos}\label{section:dataset_description}
 El conjunto de datos KDDCup99 posee aproximadamente 5 millones de datos los que se dividen en 5 clases:
@@ -42,9 +42,10 @@ En adición, los datos contienen un nivel de dificultad el cual corresponde a la
     \item KDDTest-21.arff : subconjunto de KDDTest+.arff que no contiene los datos con dificultad 21 de 21.
     \item KDDTest-21.txt : subconjunto de KDDTest+.txt que no contiene los datos con dificultad 21 de 21.
 \end{itemize}
+% TODO: aclarar bien la diferencia entre el KDDTest+.txt y el KDDTrain+.txt
 
 \section{Pre procesamiento de los datos}
-Con el objetivo de optimizar el proceso de aprendizaje y los resultados obtenidos por los algoritmos de aprendizaje es necesario realizar un pre procesamiento de los datos. Este consiste en la transformar y normalizar los datos dado que existen campos con valores reales y otros con dominio definido. Para los campos con valores binarios reales no es necesario realizar ninguna transformación [referenciar].
+Con el objetivo de optimizar el proceso de aprendizaje y los resultados obtenidos por los algoritmos es necesario realizar un pre procesamiento de los datos. Este consiste en la transformación y normalización de los datos dado que existen campos con valores reales y otros con dominio definido. Para los campos con valores binarios reales no es necesario realizar ninguna transformación [referenciar].
 
 Los campos con valores reales tienen como valor mínimo el 0 por lo que el proceso de normalización consiste en buscar el valor máximo de cada campo y dividir todos los valores por este. En el caso de los campos con dominio definido, como lo es protocol\_type que sus valores pertenecen al dominio \{'tcp', 'udp', 'icmp'\}, se le asigna un valor entero a cada posible valor, igual al su indice en la lista de posibles valores, y luego se dividen entre el máximo valor que es igual a la cantidad de valores posibles menos 1. Después de estos procesos todos los campos de los datos poseen valores entre 0 y 1.
 
