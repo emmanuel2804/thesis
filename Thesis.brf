@@ -9,6 +9,24 @@
 \backcite {tavallaee2009detailed}{{4}{(document)}{Doc-Start}}
 \backcite {stolfocost}{{4}{(document)}{Doc-Start}}
 \backcite {denning1985requirements}{{6}{1}{chapter.1}}
-\backcite {brown1990learning,churchland1992computational,mitchell1997machine}{{10}{1.4}{section.1.4}}
+\backcite {goyal2008ga,ahmadi2009intrusion}{{8}{1.2}{section.1.2}}
+\backcite {samrin2018hybrid}{{9}{1.2}{section.1.2}}
+\backcite {almseidin2017evaluation}{{9}{1.2}{section.1.2}}
+\backcite {anani2018recurrent}{{9}{1.2}{section.1.2}}
+\backcite {kabanda2019bayesian}{{9}{1.2}{section.1.2}}
+\backcite {sammany2007artificial,divyasree2018network}{{9}{1.2}{section.1.2}}
+\backcite {abualkibash2019machine}{{9}{1.2}{section.1.2}}
+\backcite {ludwig2019applying}{{9}{1.2}{section.1.2}}
+\backcite {abualkibash2019machine}{{9}{1.2}{section.1.2}}
+\backcite {brown1990learning,churchland1992computational,mitchell1997machine}{{11}{1.4}{section.1.4}}
 \backcite {lecun1995comparison}{{11}{1.4}{section.1.4}}
-\backcite {tuv2009feature}{{24}{3.3}{figure.3.3}}
+\backcite {10.5555/3203489}{{13}{1.4.1}{figure.1.1}}
+\backcite {naccha2012prediction}{{14}{1.4.2}{subsection.1.4.2}}
+\backcite {lecun1995comparison}{{14}{1.4.2}{subsection.1.4.2}}
+\backcite {montano2017redes}{{14}{1.4.2}{subsection.1.4.2}}
+\backcite {madrigal2002robots}{{14}{1.4.2}{subsection.1.4.2}}
+\backcite {forero2013control}{{14}{1.4.2}{subsection.1.4.2}}
+\backcite {breiman2001random}{{15}{1.5.2}{subsection.1.5.2}}
+\backcite {almseidin2017evaluation,anani2018recurrent, abualkibash2019machine, hasan2016feature}{{15}{1.5.2}{subsection.1.5.2}}
+\backcite {mchugh2000testing}{{17}{2.1}{section.2.1}}
+\backcite {tuv2009feature}{{25}{3.3}{figure.3.3}}
