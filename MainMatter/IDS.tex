@@ -125,7 +125,63 @@ Para el proceso de reducción de dimensiones en los datos se utilizó el algorit
 
 En su estructura, está compuesto por $N$ de árboles de decisión. Para el árbol $k$ se genera un vector aleatorio con una muestra de los datos de entrenamiento, este es independiente a los $k - 1$ generados anteriormente aunque poseen la misma distribución; el árbol es entrenado con su respectivo vector dando como resultado un clasificador. Luego de este proceso, para un dato $x$, se escoge la clase que mayor cantidad de árboles haya clasificado.
 
+La unidad básica de este algoritmo son los árboles de decision y como su nombre lo indica poseen una estructura de árbol. Estos se utilizan en los problemas donde la función objetivo tiene como salida valores discretos. Por su funcionamiento se pueden representar como un conjunto de condiciones ($if/then$). Cada nodo de un árbol representa una prueba a una característica de los datos y este posee tantas ramas como valores diferentes tome esta. La cuestión principal de este algoritmo es la decisión de cual característica se prueba en cada nodo.
+
+De forma simplificada, su funcionamiento se puede observar en la tabla siguiente, este ofrece resultados \textit{booleanos}.
+
+\begin{verbatim}
+    AD(Ejemplos, Característica_objetivo, Características)
+        Ejemplos es el conjunto de datos de entrenamiento.
+        Característica_objetivo es la característica que tiene
+        los valores que el árbol debe predecir.
+        Características es la lista del resto de las
+        Características de los datos que el árbol debe probar.
+        Devuelve como resultado un árbol que clasifica
+        correctamente los Ejemplos.
+
+    - Crear el nodo raíz del árbol.
+    - Si todos los ejemplos son positivos, devolver la raíz
+    con la etiqueta positiva.
+    - Si todos los ejemplos son negativos, devolver la raíz
+    con la etiqueta negativa.
+    - Si las características están vacías, devolver la raíz
+    con la etiqueta del valor más común de
+    Característica_objetivo en Ejemplos.
+    - En otro caso:
+        - A <- la característica que mejor clasifique los
+        Ejemplos.
+        - Asignar la característica A a la raíz.
+        - Por cada posible valor v de A:
+            - Añadir una nueva rama a la raíz para cuando
+            A tome el valor v.
+            - E' <- subconjunto de los Ejemplos que toman
+            el valor v en la característica A.
+            - Si E' esta vacío:
+                - Entonces añadir un nodo hoja a esta rama
+                con la etiqueta del valor más común de
+                Característica_objetivo en Ejemplos.
+            - En otro caso añadir el sub-árbol resultante de
+                AD(Ejemplos, 
+                   Característica_objetivo, 
+                   Características - {A})
+\end{verbatim}
+
+Para poder definir cual es la mejor característica que clasifica los ejemplos se utiliza la ganancia de información. Si se tiene un conjunto $S$ de ejemplos, la ganancia de información para la característica $A$ se puede definir como:
+\[GI(S, A) \equiv E(S) - \sum_{v \in Values(A)} \frac{|S_{v}|}{|S|}E(S_{v})\]
+donde $Values(A)$ son todos los posibles valores que puede tomar la característica $A$, $S_{v}$ es el subconjunto de $S$ donde la característica $A$ toma el valor $v$ y la función $E$ es la entropía de un conjunto. Si los valores objetivos que el árbol debe predecir toman $c$ clases diferentes y $p_{i}$ es la proporción de $S$ que pertenece a la clase $i$, entonces la entropía se define como:
+\[E(S) \equiv \sum_{i=1}^c -p_{i}log_{2}(p_{i})\]
+
 Decision tree
+% para funciones con resultados discretos
+% se pueden representar como un if/then
+% se puede entender las decisiones tomadas
+% cada nodo es una prueba a un atributo y cada rama de este nodo es un valor diferente de ese atributo
+% la principal decision es cual atributo prueba en cada nodo
+% se utiliza en cada nivel el atributo que mas \textit{ganancia de información} tenga
+% entropia: caracteriza la pureza de un conjunto $E(S) @= - p_{\oplus}log_{2}(p_{\oplus}) - p_{\ominus}log_{2}(p_{\ominus})$ probabilidad del caso negativo y del positivo (oplus y ominus)
+% si el conjunto tiene c categorías entonces la entropia es: $E(S) @= \sum_{i=1}^c -p_{i}log_{2}(p_{i})$
+% ganancia de informacion del conjunto S con el atributo A: $G(S, A) @= E(S) - \sum_{v \in Values(A)} \frac{S_{v}}{S}E(S_{v})$ donde Values(A) son todos los posibles valores que puede tomar el atributo A y S_{v} es el subconjunto de S donde el atributo A toma el valor v
+% el algoritmo empieza por la raiz seleccionando el atributo que mas ganancia de informacion tenga, crea tantas ramas como valores difrentes tenga ese atributo y baja al siguiente nivel para repetir este proceso hasta que se acaben todos los atributos
 
 Selector de características, esto se hace promediando la importancia de las características en cada árbol.
 

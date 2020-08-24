@@ -304,17 +304,19 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.tex
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/4x50_accuracy.png
