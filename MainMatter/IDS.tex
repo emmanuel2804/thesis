@@ -82,26 +82,10 @@ En el proceso de entrenamiento de una red neuronal usualmente se itera sobre los
 Un problema común entre los algoritmos de aprendizaje de máquina es el sobreajuste. Esto se puede presenciar cuando el comportamiento del modelo ante los datos de validación alcanza su punto máximo y luego comienza degradarse. Existen varias formas de lidiar con el sobreajuste aunque el \textit{dropout} es una de las más efectivas. Solo se ejecuta en el proceso de entrenamiento y se aplica a las capas de la red. Consiste en la desactivaci\'on aleatoria de algunas de las características de salida de la capa en la que se encuentra, por ejemplo, si el factor de desactivaci\'on es de $0.5$ y la salida toma los valores [1, 0.7, 2.1,  0.3], se desactivan la mitad de las características y el resultado podría ser [1, 0, 0, 0.3].
 % TODO: explicar el backpropagation
 
-% TODO: terminar
 \subsection{Aplicaciones}
-% las ann son especiales en casos de:
-    % la entrada es representada por varios pares de atributos
-    % la salida de la funcion objetivo puede ser de cualquier tipo
-    % los ejemplos de entrenamiento pueden contener errores
-    % largos tiempos de entrenamiento son aceptables
-    % se requiere de una rapida evaluacion de la funcion objetivo aprendida
-    % no es importante que los humanos entiendan la funcion objetivo aprendida
-
 Las redes neuronales artificiales pueden utilizarse para resolver diversos problemas. En la práctica los resultados obtenidos han sido muy buenos. Por lo general se aplican en escenarios donde la entrada puede representada por varios pares de atributos, la salida de la función objetivo puede ser de cualquier tipo, los ejemplos de entrenamiento pueden contener errores, se requieren de largos tiempos de entrenamiento, se requiere de una rápida evaluación de los datos, no es necesario que los humanos comprendan la función objetivo aprendida, entre otras características.
 
-A lo largo de la historia se han utilizado para la solución de disímiles problemas. De forma general, las áreas en las que se aplican son la predicción de funciones \cite{naccha2012prediction}, clasificación \cite{lecun1995comparison}, procesamiento de datos \cite{montano2017redes}, robótica \cite{madrigal2002robots} e ingeniería de control \cite{forero2013control}. La detección de intrusos se puede definir como un problema de clasificación dado que después de analizar los datos se debe decidir si estos son tráfico normal o anómalo, en algunos casos también se especifica el tipo de ataque. 
-% aplicaciones
-
-% potencia de calculo
-
-% critica
-
-% clases y tipos
+A lo largo de la historia se han utilizado para la solución de disímiles problemas. De forma general, las áreas en las que se aplican son la predicción de funciones \cite{naccha2012prediction}, clasificación \cite{lecun1995comparison}, procesamiento de datos \cite{montano2017redes}, robótica \cite{madrigal2002robots} e ingeniería de control \cite{forero2013control}. La detección de intrusos se puede definir como un problema de clasificación dado que después de analizar los datos se debe decidir si estos son tráfico normal o anómalo, en algunos casos también se especifica el tipo de ataque.
 
 \section{Conjunto de datos y características}
 Distintas investigaciones se han enfocado en realizar sistemas de detección de intrusos teniendo como fuente de datos NSL-KDD. En 1998 la Agencia de Proyectos de Investigación Avanzados de Defensa, más conocida por su acrónimo DARPA, recopiló y almacenó la información del tráfico de una red que nombró KDDCup99 llegando a ser uno de los conjuntos de datos públicos que contiene diferentes ataques vigentes en la actualidad y más utilizados por la comunidad científica. NSL-KDD fue diseñado para resolver varios de los problemas existentes en el conjunto original como son la información redundante, tanto en los conjuntos de entrenamiento como de prueba, y la cantidad de datos en cada subconjunto es razonable, lo cual hace comparable y consistentes los resultados de cualquier trabajo y evita tener que escoger un subconjunto aleatorio para los diferentes procesos.
@@ -119,8 +103,7 @@ La solución que se propone para el proceso de detección de intrusos en NSK-KDD
 
 En cada etapa pueden ser utilizados diferentes algoritmos dependiendo de las características del problema a resolver en cada una de ellas. Para esto es necesario identificar que algoritmos son los más prometedores así como la mejor combinación de ellos.
 
-% TODO:
-\subsection{Bosques aleatorios(terminar)}
+\subsection{Bosques aleatorios}
 Para el proceso de reducción de dimensiones en los datos se utilizó el algoritmo de bosques aleatorios \cite{breiman2001random}. Después de la revisión de varios artículos \cite{almseidin2017evaluation,anani2018recurrent, abualkibash2019machine, hasan2016feature} este mostró buenos resultados para el problema en cuestión, en algunos casos como clasificador y en otros para la selección de las características con mayor relevancia en los datos. Es un algoritmo que ofrece un buen rendimiento en muchos problemas y por su facilidad a la hora de entrenar y ajustar ha ganado gran popularidad.
 
 En su estructura, está compuesto por $N$ de árboles de decisión. Para el árbol $k$ se genera un vector aleatorio con una muestra de los datos de entrenamiento, este es independiente a los $k - 1$ generados anteriormente aunque poseen la misma distribución; el árbol es entrenado con su respectivo vector dando como resultado un clasificador. Luego de este proceso, para un dato $x$, se escoge la clase que mayor cantidad de árboles haya clasificado.
@@ -171,24 +154,4 @@ Para poder definir cual es la mejor característica que clasifica los ejemplos s
 donde $Values(A)$ son todos los posibles valores que puede tomar la característica $A$, $S_{v}$ es el subconjunto de $S$ donde la característica $A$ toma el valor $v$ y la función $E$ es la entropía de un conjunto. Si los valores objetivos que el árbol debe predecir toman $c$ clases diferentes y $p_{i}$ es la proporción de $S$ que pertenece a la clase $i$, entonces la entropía se define como:
 \[E(S) \equiv \sum_{i=1}^c -p_{i}log_{2}(p_{i})\]
 
-Decision tree
-% para funciones con resultados discretos
-% se pueden representar como un if/then
-% se puede entender las decisiones tomadas
-% cada nodo es una prueba a un atributo y cada rama de este nodo es un valor diferente de ese atributo
-% la principal decision es cual atributo prueba en cada nodo
-% se utiliza en cada nivel el atributo que mas \textit{ganancia de información} tenga
-% entropia: caracteriza la pureza de un conjunto $E(S) @= - p_{\oplus}log_{2}(p_{\oplus}) - p_{\ominus}log_{2}(p_{\ominus})$ probabilidad del caso negativo y del positivo (oplus y ominus)
-% si el conjunto tiene c categorías entonces la entropia es: $E(S) @= \sum_{i=1}^c -p_{i}log_{2}(p_{i})$
-% ganancia de informacion del conjunto S con el atributo A: $G(S, A) @= E(S) - \sum_{v \in Values(A)} \frac{S_{v}}{S}E(S_{v})$ donde Values(A) son todos los posibles valores que puede tomar el atributo A y S_{v} es el subconjunto de S donde el atributo A toma el valor v
-% el algoritmo empieza por la raiz seleccionando el atributo que mas ganancia de informacion tenga, crea tantas ramas como valores difrentes tenga ese atributo y baja al siguiente nivel para repetir este proceso hasta que se acaben todos los atributos
-
-Selector de características, esto se hace promediando la importancia de las características en cada árbol.
-
-% por que se escogió este
-% definición, bagging, decision tree
-
-% explicación del funcionamiento del algoritmo y como mejora los resultados en este problema[ver tesis de RNN en IDS]
-
-% TODO: esta bibliografía para la parte de features selection
-% \cite{hasan2016feature} : NSL-KDD, features selection with random forest, buenísimo trabajo porque lo explican todo al detalle y muchas gráficas bien claras
+Como se ha mostrado, la base de este algoritmo es la selección de las  características más importantes. Como se mencionó anteriormente, bosques aleatorios es la unión de varios árboles de decisión, cada uno entrenado con una porción aleatoria de los datos. Esto permite que la elección de la importancia de cada característica varíe en cada árbol. Los bosques aleatorios promedian la importancia brindada por cada árbol ofreciendo un mejor resultado general.
