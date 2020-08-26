@@ -21,6 +21,8 @@
 \backcite {brown1990learning,churchland1992computational,mitchell1997machine}{{11}{1.4}{section.1.4}}
 \backcite {lecun1995comparison}{{11}{1.4}{section.1.4}}
 \backcite {10.5555/3203489}{{13}{1.4.1}{figure.1.1}}
+\backcite {kingma2014adam}{{13}{1.4.1}{figure.1.1}}
+\backcite {tieleman2012lecture}{{13}{1.4.1}{figure.1.1}}
 \backcite {naccha2012prediction}{{14}{1.4.2}{subsection.1.4.2}}
 \backcite {lecun1995comparison}{{14}{1.4.2}{subsection.1.4.2}}
 \backcite {montano2017redes}{{14}{1.4.2}{subsection.1.4.2}}
@@ -28,7 +30,9 @@
 \backcite {forero2013control}{{14}{1.4.2}{subsection.1.4.2}}
 \backcite {breiman2001random}{{15}{1.5.2}{subsection.1.5.2}}
 \backcite {almseidin2017evaluation,anani2018recurrent, abualkibash2019machine, hasan2016feature}{{15}{1.5.2}{subsection.1.5.2}}
+\backcite {mchugh2000testing}{{18}{2}{chapter.2}}
 \backcite {mchugh2000testing}{{19}{2.1}{section.2.1}}
-\backcite {hasan2016feature}{{22}{2.5.1}{subsection.2.5.1}}
-\backcite {10.5555/3203489}{{23}{2.5.2}{subsection.2.5.2}}
+\backcite {patro2015normalization}{{20}{2.2}{section.2.2}}
+\backcite {tuv2009feature}{{21}{2.3}{section.2.3}}
+\backcite {10.5555/3203489}{{22}{2.5}{figure.2.1}}
 \backcite {tuv2009feature}{{27}{3.3}{figure.3.3}}

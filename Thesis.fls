@@ -314,6 +314,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Dataset.tex
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/distribution_train.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/distribution_train.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/distribution_train.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/distribution_test.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/distribution_test.png
+INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/Images/distribution_test.png
 OUTPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.aux
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.tex
 INPUT /media/emmanuel/Almacen/Escuela/Tesis/Plantilla Tesis/MainMatter/Results.tex
