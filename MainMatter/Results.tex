@@ -6,7 +6,15 @@
 %===================================================================================
 
 % introducción
-Para iniciar la experimentación fue necesario normalizar los datos y luego se realizaron tres fases de experimentos. En la primera fase se probaron varias arquitecturas de red con el conjunto de datos original. Para la segunda fase se analizó la reducción de dimensiones utilizando el algoritmo de \'arboles aleatorios. Como última fase se modificó el conjunto de datos original para obtener uno nuevo y probar los algoritmos anteriores.
+Para iniciar la experimentación fue necesario normalizar los datos y luego se realizaron tres fases de experimentos. En la primera fase se probaron varias arquitecturas de red con el conjunto de datos original. Para la segunda fase se analizó la reducción de dimensiones utilizando el algoritmo de bosques aleatorios. Como última fase se modificó el conjunto de datos original para obtener uno nuevo y probar los algoritmos anteriores.
+
+Como se mencionó anteriormente, es de especial interés medir en cada modelo los casos falsos positivos ($FP$) y falsos negativos ($FN$). En adición se utilizaron las métricas de tasa de aciertos (\textit{accuracy}), 
+\[acc = \frac{TP + TN}{TP + FP + TN + FN}\] 
+precisión \cite{salton1983introduction} (\textit{precision}), 
+\[P = \frac{TP}{TP + FP}\]
+ y sensibilidad \cite{allen1955machine} (\textit{recall}). 
+\[R = \frac{TP}{TP + FN}\]
+Estas métricas son de gran ayuda para comparar diversos resultados en otros trabajos.
 
 \section{Procesamiento de los datos}
 % proceso de limpieza de datos
@@ -52,52 +60,61 @@ En este modelo, como en los restantes, se utilizó como función de activación 
 
 Como en todos los casos se trabaja con redes neuronales de un tamaño considerable, varios ciclos de entrenamiento y un conjunto de datos con una gran cantidad de entradas, esto puede producir un sobreajuste en las fases de entrenamiento. Como medida de contención se le aplicó la técnica \textit{dropout} a varias capas intermedias de cada uno de los modelos.
 
-En el proceso de entrenamiento llevado a cabo por cada modelo, se iteraron 100 veces sobre todos los datos(\textit{epochs}) en lotes de tamaño 64(\textit{batch}). Los resultados de la fase de entrenamiento del modelo 1 se pueden observar en la figura \ref{fig:4x5_train}. Para probar los modelos se utilizaron los dos conjuntos de datos de prueba expuestos en la sección \ref{section:dataset_description}. Como los resultados pueden variar con cada entrenamiento, se realizó este proceso 10 veces y se ejecutaron las pruebas en cada uno, obteniendo 10 resultados que se promediaron para tener un valor m\'as preciso. Los resultados para el modelo 1 se pueden observar en la tabla \ref{tab:model1_results}.
-
-\begin{figure}[h]
+\begin{figure}[!hb]
     \centering
     \subfigure{\label{fig:4x5_accuracy}\includegraphics[width=.45\linewidth]{Images/4x50_accuracy.png}}
     \subfigure{\label{fig:4x5_loss}\includegraphics[width=.45\linewidth]{Images/4x50_loss.png}}
 
-    \caption{Exactitud y pérdida en la fase de entrenamiento del modelo 1.}
+    \caption{Tasa de aciertos (\textit{acc}) y pérdida en la fase de entrenamiento del modelo 1.}
     \label{fig:4x5_train}
 \end{figure}
 
-\begin{table}[h]
-    \begin{center}
-        \caption{Resultados promedio del modelo 1 en los dos conjuntos de prueba.}
+En el proceso de entrenamiento llevado a cabo por cada modelo, se iteraron 100 veces sobre todos los datos(\textit{epochs}) en lotes de tamaño 64(\textit{batch}). Los resultados de la fase de entrenamiento del modelo 1 se pueden observar en la figura \ref{fig:4x5_train}. Para probar los modelos se utilizaron los dos conjuntos de datos de prueba expuestos en la sección \ref{section:dataset_description}. Como los resultados pueden variar con cada entrenamiento, se realizó este proceso 10 veces y se ejecutaron las pruebas en cada uno, obteniendo 10 resultados que se promediaron para tener un valor m\'as preciso.
 
-        \label{tab:model1_results}
-        \begin{tabular}{c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-        \textbf{} & \textbf{KDDTest+} & \textbf{KDDTest-21}\\
+Se puede observar que los resultados obtenidos superan al 50\% del algoritmo aleatorio en ambos conjuntos de prueba. A pesar de ello difieren de la fase de entrenamiento lo cual indica que el modelo no está generalizando correctamente los datos. En búsqueda de modelos con mayor comprensión de los datos se crearon dos nuevos, uno con 64, 128, 64, 32 y 16 y el otro con 64, 128, 128, 64, 32 y 16 neuronas en cada capa, en ese orden empezando por la primera capa oculta y terminando en la ultima respectivamente. Los comportamientos en las fases de entrenamiento fueron similares y los resultados con los conjuntos KDDTest+ y KDDTest-21, junto a los del modelo~1, se pueden observar en las tablas \ref{tab:kddtest+_results} y \ref{tab:kddtest21_results} respectivamente.
+
+\begin{table}[h!b]
+    \begin{center}
+        \caption{Resultados promedio de los modelos en el conjunto de prueba KDDTest+.}
+
+        \label{tab:kddtest+_results}
+        \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+        \textbf{} & \textbf{Modelo 1} & \textbf{Modelo 2} & \textbf{Modelo 3}\\
         \hline
-        Modelo 1 & 77.6392 & 57.5401\\
+        FP & 232 & 240 & 236\\
+        &(1.03\%)&(1.06\%)&(1.05\%)\\
+        FN & 5066 & 4966 & 4909\\
+        &(22.47\%)&(22.03\%)&(21.77\%)\\
+        acc & 0.7649 & 0.7691 & 0.7718\\
+        P & 0.9709 & 0.9704 & 0.9711\\
+        R & 0.6052 & 0.6130 & 0.6175\\
         \end{tabular}
     \end{center}
 \end{table}
 
-Se puede observar que los resultados obtenidos superan al 50\% del algoritmo aleatorio en ambos conjuntos de prueba. A pesar de ello difieren de la fase de entrenamiento lo cual indica que el modelo no está generalizando correctamente los datos. En búsqueda de modelos con mayor comprensión de los datos se crearon dos nuevos, uno con 64, 128, 64, 32 y 16 y el otro con 64, 128, 128, 64, 32 y 16 neuronas en cada capa, en ese orden empezando por la primera capa oculta y terminando en la ultima respectivamente. Los comportamientos en las fases de entrenamiento fueron similares y los resultados se pueden observar en la tabla \ref{tab:model23_results}.
-
-\begin{table}[h]
+\begin{table}[t]
     \begin{center}
-        \caption{Resultados promedio del modelo 2 y 3 en los dos conjuntos de prueba.}
+        \caption{Resultados promedio de los modelos en el conjunto de prueba KDDTest-21.}
 
-        \label{tab:model23_results}
-        \begin{tabular}{c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-        \textbf{} & \textbf{KDDTest+} & \textbf{KDDTest-21}\\
+        \label{tab:kddtest21_results}
+        \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+        \textbf{} & \textbf{Modelo 1} & \textbf{Modelo 2} & \textbf{Modelo 3}\\
         \hline
-        Modelo 2 & 76.9894 & 56.2818\\
-        Modelo 3 & 76.4411 & 55.2278\\
+        FP & 229 & 234 & 233\\
+        &(1.93\%)&(1.97\%)&(1.97\%)\\
+        FN & 5066 & 4966 & 4909\\
+        &(42.75\%)&(41.91\%)&(41.63\%)\\
+        acc & 0.5531 & 0.5612 & 0.5661\\
+        P & 0.9529 & 0.9529 & 0.9536\\
+        R & 0.4776 & 0.4879 & 0.4938\\
         \end{tabular}
     \end{center}
 \end{table}
-
-% TODO: explicar las métricas
 
 \section{Selección de características(incompleto)}
 % selección de features
 
-Para una mejor comprensión de los datos se realizaron multiples gráficas en las que se muestran una relación de dos de las características y datos de tráfico normal y anómalo. En la mayoría de estas existe una gran dispersión de los datos y no se observa un par de características evidentes que separen al conjunto como se puede observar en \ref{fig:entropy}. Por otra parte si se observan algunas que aportan muy poca o nada de información, esto se evidencia en \ref{fig:redundant}. En estos casos se tiene la característica $dst\_host\_diff\_srv\_rate$ que en la figura \ref{fig:entropy} si influye en la clasificación de los datos, sin embargo, en \ref{fig:redundant}, cualquiera sea el valor que tome los resultados no varían mucho.
+Para una mejor comprensión de los datos se realizaron multiples gráficas en las que se muestran una relación de dos de las características y datos de tráfico normal y anómalo. En la mayoría de estas existe una gran dispersión de los datos y no se observa un par de características evidentes que separen al conjunto como se puede observar en \ref{fig:entropy}. Por otra parte, si se observan algunas que aportan muy poca o nada de información, esto se evidencia en \ref{fig:redundant}. En estos casos se tiene la característica $dst\_host\_diff\_srv\_rate$ que en la figura \ref{fig:entropy} si influye en la clasificación de los datos, sin embargo, en \ref{fig:redundant}, cualquiera sea el valor que tome los resultados no varían mucho.
 
 \begin{figure}[b]
     \includegraphics[width=\linewidth]{Images/dst_host_count-dst_host_diff_srv_rate.png}
@@ -114,7 +131,34 @@ Para una mejor comprensión de los datos se realizaron multiples gráficas en la
     \label{fig:redundant}
 \end{figure}
 
-Las características redundantes hacen que a los modelos les tome más llevar a cabo la fase de entrenamiento o pueden causar un sobreajuste (\textit{overfitting}) que puede afectar la generalización, entre otros problemas\cite{tuv2009feature}.
+Las características redundantes hacen que a los modelos les tome más tiempo llevar a cabo la fase de entrenamiento o pueden causar un sobreajuste (\textit{overfitting}) que puede afectar la generalización, entre otros problemas \cite{tuv2009feature}. Como se explicó anteriormente, el algoritmo de bosques aleatorios basa su funcionamiento en la importancia de las características por lo que es de gran utilidad para saber la utilidad de cada una. Para esto se entrenó y probó el algoritmo con varios parámetros, 10 veces en cada ocasión y se promediaron los resultados. La métrica usada en este caso fue el \textit{accuracy} y ofreció los valores 0.7618 y 0.5469 para los conjuntos KDDTest+ y KDDTest-21 respectivamente con los parámetros que se muestran a continuación:
+
+\begin{verbatim}
+    parameters = {
+    # Activa la toma de muestras aleatorias con reemplazo
+    'bootstrap': True,
+
+    # Mínimo numero de ejemplos para considerar un nodo hoja
+    'min_samples_leaf': .001, # representa el 0.1% del dataset
+
+    # Número de árboles en el bosque
+    'n_estimators': 100,
+
+    # Número mínimo de ejemplos para dividir un nodo interno
+    'min_samples_split': 20,
+
+    # Numero de características a considerar cuando se busca 
+    la mejor división
+    'max_features': 20,
+
+    # Máxima profundidad de los árboles
+    'max_depth': 6,
+
+    # Número máximo de nodos hojas. Si es none la cantidad de 
+    hojas es ilimitados
+    'max_leaf_nodes': None
+}
+\end{verbatim}
 
 Explicación y muestreo de resultados de la aplicación del algoritmo Random Forest para la extracción de las características de mayor importancia para la clasificación
 % TODO: explicar la selección de parámetros para el random forest, poner las gráficas de la importancia de los features y mostrar resultados utilizando menos features.

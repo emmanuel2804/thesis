@@ -42,6 +42,19 @@ En adición, cada dato contiene un nivel de dificultad. Para lograr este objetiv
     \item KDDTest-21.txt : subconjunto de KDDTest+.txt que no contiene los datos con dificultad 21 de 21.
 \end{itemize}
 
+\begin{table}[h]
+    \begin{center}
+        \caption{Cantidad de datos en cada subconjunto.}
+
+        \label{tab:len_datasets}
+        \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+        \textbf{KDDTrain+} & \textbf{KDDTrain+\_20Percent} & \textbf{KDDTest+} & \textbf{KDDTest-21}\\
+        \hline
+        125973 & 25192 & 22544 & 11850\\
+        \end{tabular}
+    \end{center}
+\end{table}
+
 \section{Pre procesamiento de los datos}
 Con el objetivo de optimizar el proceso de aprendizaje y los resultados obtenidos por los algoritmos es necesario realizar un pre procesamiento de los datos. Este consiste en la transformación y normalización de los datos dado que existen campos con valores reales y otros con dominio definido. Para los campos con valores binarios reales no es necesario realizar ninguna transformación \cite{patro2015normalization}.
 
@@ -86,7 +99,7 @@ A pesar de que este conjunto de datos tiene grandes virtudes, no es perfecto. Al
         \textbf{} & \textbf{Normal} & \textbf{DoS} & \textbf{Probe} & \textbf{U2R} & \textbf{R2L} & \textbf{Total}\\
         \hline
         \textbf{Train} & 67343 & 45927 & 11656 & 52 & 995 & 125973\\
-        \textbf{Test} & 9711 & 7458 & 2421 & 200 & 2754 & 22543\\
+        \textbf{Test} & 9711 & 7458 & 2421 & 200 & 2754 & 22544\\
         \end{tabular}
     \end{center}
 \end{table}
