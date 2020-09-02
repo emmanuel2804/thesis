@@ -1,10 +1,12 @@
 %===================================================================================
 % Chapter: IDS
 %===================================================================================
-\chapter{Sistema de Detección de Intrusos}\label{chapter:ids}
-% \addcontentsline{toc}{chapter}{Sistema de Detección de Intrusos}
+\chapter*{Capítulo 1. Sistema de Detección de Intrusos}\label{chapter:ids}
+\addcontentsline{toc}{chapter}{Capítulo 1. Sistema de Detección de Intrusos}
 %===================================================================================
+\stepcounter{chapter}
 
+\section{Generalidades}
 Entre los años 1984 y 1986, Dorothy Denning y Peter Neumann desarrollaron un primer modelo de IDS \cite{denning1985requirements} para proteger los sistemas de cómputos. Pertenecen a la rama de la computación de las redes aunque en los últimos tiempos se han aplicado para su creación técnicas de distintas disciplinas como son algunas de inteligencia artificial. En la última década se han logrado avances en esta tecnología, obteniendo mejores resultados. A pesar de ello no se ha logrado un sistema con una efectividad lo suficientemente alta y aún es una línea de investigación activa. Se considera que estos sistemas tienen una gran importancia, ya sea económica o social, al proteger los datos delicados que viajan por la red y mantener la privacidad de cada usuario. Entre las técnicas de inteligencia artificial más utilizadas se encuentra el aprendizaje de máquinas.
 
 \section{Tipos de sistemas}
@@ -29,11 +31,11 @@ Los IDS basados en técnicas de aprendizaje de máquinas son sistemas entrenados
     \item Tipo del ataque.
 \end{itemize}
 
-Esta investigación se centra en los problemas de los casos no observados, falsos positivos y falsos negativos, aplicados sobre el conjunto de datos NSL-KDD, determinando si un paquete de red posee un comportamiento normal o anómalo. A pesar de que en \cite{goyal2008ga,ahmadi2009intrusion} trabajan con el conjunto de datos KDD99, atacan el problema de clasificación con dos variantes diferentes de algoritmos genéticos. En otra investigación \cite{samrin2018hybrid} proponen el uso del algoritmo k-medias para el agrupamiento en subconjuntos donde cada uno contenga datos de un solo tipo de ataque, crear y entrenar $n$ redes neuronales(una por cada tipo de ataque diferente) y con esto crear un método de conjunto(\textit{Ensemble learning}). 
+Esta investigación se centra en los problemas de los casos no observados, falsos positivos y falsos negativos, aplicados sobre el conjunto de datos NSL-KDD, determinando si un paquete de red posee un comportamiento normal o anómalo. A pesar de que Goyal y Ahmadi \cite{goyal2008ga,ahmadi2009intrusion} trabajan con el conjunto de datos KDD99, atacan el problema de clasificación con dos variantes diferentes de algoritmos genéticos. En la investigación de Samrin y Vasumathi \cite{samrin2018hybrid} proponen el uso del algoritmo k-medias para el agrupamiento en subconjuntos donde cada uno contenga datos de un solo tipo de ataque, crear y entrenar $n$ redes neuronales(una por cada tipo de ataque diferente) y con esto crear un método de conjunto(\textit{Ensemble learning}). 
 
-El trabajo \cite{almseidin2017evaluation} ofrece una comparación de varios algoritmos, mostrando el de bosques aleatorios mejores resultados que el resto. Esta mejora se puede apreciar en \cite{anani2018recurrent}, que se busca minimizar el tiempo de entrenamiento de redes neuronales recurrentes sobre KDD99, utilizan dos algoritmos para la reducción de dimensiones de los datos y bosques aleatorios vuelve a mostrar mejores resultados. Utilizando ese mismo conjunto de datos se tiene \cite{kabanda2019bayesian}, aquí realizan un análisis de varios algoritmos y de las características de los datos. Como propuesta de reducción de dimensiones se tiene \cite{sammany2007artificial,divyasree2018network}, en el primer caso no se especifica como se realizó y en el segundo caso solo trabajan con las características básicas y de contenido, ignorando las de tráfico; para la clasificación de cada ataque por separado seleccionan 10 de las características que utilizan con el algoritmo de \textit{chi cuadrado}
+El trabajo de Almseidin \cite{almseidin2017evaluation} ofrece una comparación de varios algoritmos, mostrando el de bosques aleatorios mejores resultados que el resto. Esta mejora se puede apreciar en Anani \cite{anani2018recurrent}, que se busca minimizar el tiempo de entrenamiento de redes neuronales recurrentes sobre KDD99, utilizan dos algoritmos para la reducción de dimensiones de los datos y bosques aleatorios vuelve a mostrar mejores resultados. Utilizando ese mismo conjunto de datos se tiene Kabanda \cite{kabanda2019bayesian}, aquí realizan un análisis de varios algoritmos y de las características de los datos. Como propuesta de reducción de dimensiones se tiene Sammany y Divyasree \cite{sammany2007artificial,divyasree2018network}, en el primer caso no se especifica como se realizó y en el segundo caso solo trabajan con las características básicas y de contenido, ignorando las de tráfico; para la clasificación de cada ataque por separado seleccionan 10 de las características que utilizan con el algoritmo de \textit{chi cuadrado}
 
-Este trabajo se realizó sobre el conjunto de datos NSL-KDD, que es una mejora del conjunto original KDDCup99. De igual manera se puede encontrar el trabajo \cite{abualkibash2019machine}, en el presentan resultados de varios algoritmos diferentes, nuevamente mostrando buenos resultados con bosques aleatorios. En este caso utilizan el conjunto de prueba que se encuentra en NSL-KDD. Por otra parte, en \cite{ludwig2019applying} no se especifican si los resultados fueron obtenidos utilizando dichos datos de prueba, su forma de enfrentar el problema es con métodos de conjunto utilizando varias redes neuronales. De las bibliografías consultadas, la única que ofrece una observación sobre la predicción de los datos que no estuvieron presentes en la fase de entrenamiento del algoritmo es \cite{abualkibash2019machine}.
+Este trabajo se realizó sobre el conjunto de datos NSL-KDD, que es una mejora del conjunto original KDDCup99. De igual manera se puede encontrar el trabajo de Abualkibash \cite{abualkibash2019machine}, en el presentan resultados de varios algoritmos diferentes, nuevamente mostrando buenos resultados con bosques aleatorios. En este caso utilizan el conjunto de prueba que se encuentra en NSL-KDD. Por otra parte, en Ludwig \cite{ludwig2019applying} no se especifican si los resultados fueron obtenidos utilizando dichos datos de prueba, su forma de enfrentar el problema es con métodos de conjunto utilizando varias redes neuronales. De las bibliografías consultadas, la única que ofrece una observación sobre la predicción de los datos que no estuvieron presentes en la fase de entrenamiento del algoritmo es el trabajo presentado por Abualkibash \cite{abualkibash2019machine}.
 
 \section{Fases de la detección y prevención de intrusos}
 Los problemas tratados en esta tesis pueden ser enmarcados como sistemas de detección de intrusos, estos forman parte de los sistemas de detección y prevención de intrusos, los que están compuestos por las siguientes fases:
@@ -51,7 +53,7 @@ Los sistemas de prevención de intrusos se diferencian de los sistemas de detecc
 
 Las redes neuronales artificiales (RNA o ANN por sus siglas en inglés) son algoritmos de la rama de la inteligencia artificial que dado un conjunto de datos de ejemplo, ofrecen una función, sin importar el dominio de los valores de entrada y de salida, capaz de aproximar el resultado. Han brindado resultados excelentes en el reconocimiento de escritura a mano, palabras en audios y rostros.
 
-Los primeros acercamientos a esta nueva tecnología fueron a principios de los a\~nos 1950 inspirados en los sistemas de aprendizaje biológicos. Son un conjunto de unidades simples, conectadas de manera densa entre ellas, donde cada unidad toma un real (que puede ser o no la salida de otra) y produce como resultado otro valor real (que puede convertirse en la entrada de otra unidad). El cerebro humano se estima que posee una red neuronal con $10^{11}$ unidades densamente conectadas, cada una de ellas conectadas con otras $10^{4}$ en promedio. La velocidad de comunicación entre una neurona y otra se encuentra en el orden de $10^{-3}$ segundos, por otra parte, las computadoras poseen una velocidad de $10^{-10}$ segundos. Los humanos son capaces de tomar complejas decisiones sorprendentemente rápido. Un ejemplo de esto es el reconocimiento de rostros, a un humano promedio le toma aproximadamente $10^{-1}$ segundo reconocer visualmente a su madre. Teniendo en cuenta la velocidad de comunicación entre neuronas, este proceso no excede unos cientos de pasos. Esto ha llevado a la comunidad científica a pensar que el sistema neuronal biológico es capaz de realizar tareas de procesamiento de información de manera altamente paralelas distribuidas en varias neuronas. Una de las motivaciones principales es lograr un sistema capaz de hacer procesos altamente paralelos en representaciones distribuidas \cite{brown1990learning,churchland1992computational,mitchell1997machine}.
+Los primeros acercamientos a esta nueva tecnología fueron a principios de los a\~nos 1950 inspirados en los sistemas de aprendizaje biológicos. Son un conjunto de unidades simples, conectadas de manera densa entre ellas, donde cada unidad toma un real (que puede ser o no la salida de otra) y produce como resultado otro valor real (que puede convertirse en la entrada de otra unidad). El cerebro humano se estima que posee una red neuronal con $10^{11}$ unidades densamente conectadas, cada una de ellas conectadas con otras $10^{4}$ en promedio. La velocidad de comunicación entre una neurona y otra se encuentra en el orden de $10^{-3}$ segundos, por otra parte, las computadoras poseen una velocidad de $10^{-10}$ segundos. Los humanos son capaces de tomar complejas decisiones sorprendentemente rápido. Un ejemplo de esto es el reconocimiento de rostros, a un humano promedio le toma aproximadamente $10^{-1}$ segundo reconocer visualmente a su madre. Teniendo en cuenta la velocidad de comunicación entre neuronas, este proceso no excede unos cientos de pasos. Esto ha llevado a la comunidad científica a pensar que el sistema neuronal biológico es capaz de realizar tareas de procesamiento de información de manera altamente paralelas distribuidas en varias neuronas. Una de las motivaciones principales es lograr un sistema capaz de hacer procesos altamente paralelos en representaciones distribuidas como lo plantean Brown, Churchland y Mitchell \cite{brown1990learning,churchland1992computational,mitchell1997machine}.
 
 Después de los primeros pasos en la creación de las redes neuronales, los científicos se encontraron con el problema de entrenar grandes arquitecturas de una forma eficiente. A mediados de los a\~nos 1980, varios estudios de diferentes partes del mundo, descubrieron de forma independiente el algoritmo de propagación hacia atrás, el cual utiliza el método de optimizaci\'on de descenso por gradiente para entrenar cadenas de operaciones param\'etricas. Unos de los pioneros en utilizar estas técnicas con grandes éxitos fueron los laboratorios Bell, cuando Yann LeCun utilizó las ideas iniciales de las redes convolucionales y la propagación hacia atrás. Como resultado obtuvieron una red que podía reconocer dígitos escritos a mano con alta efectividad, la cual nombraron LeNet \cite{lecun1995comparison}, y fue utilizada por el Servicio Postal de los Estados Unidos en la década de 1990. A pesar de que las redes neuronales artificiales fueron inspiradas por el sistema biológico, ambas poseen características que las diferencian.
 
@@ -64,7 +66,7 @@ Las redes neuronales artificiales reciben este nombre por su composición. Está
     \item \textbf{Capa de salida:} última capa de cualquier modelo. Es la que ofrece los valores resultantes de los cálculos.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[h!t]
     \centering
     \includegraphics[width=.6\linewidth]{Images/neural_network.png}
     \caption{Estructura básica de una red neuronal.}
@@ -72,7 +74,7 @@ Las redes neuronales artificiales reciben este nombre por su composición. Está
 \end{figure}
 
 Cada capa puede poseer una o más neuronas, matemáticamente, estas se definen por $f(x) = k(\sum_{i}w_{i}g_{i}(x))$, donde $k$ es la función de activación, $w$ es el vector de los pesos asociados a cada conexión y $g(x)$ son los valores resultantes de la capa anterior. Las funciones de activación en la mayoría de los casos se utilizan algunas ya definidas como pueden ser la tangente hiperbólica, la función sigmoide o la unidad lineal rectificada (ReLU, por sus siglas en inglés), entre otras. En este trabajo se utilizó la función sigmoide para la capa de salida: \[f(x) = \frac{1}{1 + e^{-x}}\] y ReLU para las capas intermedias: \[f(x)=max(0,x)\]
-Esto se debe a que la simplicidad de ReLU permite agilizar el proceso de entrenamiento y cuando existen muchas capas, la función sigmoide, puede hacer que las neuronas desaparezcan dado que sus valores tienden a 0. La parte final de todo modelo es la función de pérdida y un optimizador; la primera es la encargada de comparar las predicciones con el valor real de los datos, ofreciendo un valor de pérdida, mientras que el optimizador es el encargado de recibir estos valores para reajustar los pesos. Como el problema que se está enfrentando en este trabajo es de clasificación binaria y la salida de la red es una probabilidad es mejor utilizar $binary_crossentropy$ como función de pérdida. Existen otras opciones pero esta es la más utilizada en los modelos donde la salida es un valor de probabilidad \cite{10.5555/3203489}. En el caso de los optimizadores se probaron dos variantes diferentes, en los primeros modelos se utilizó una optimizaci\'on de momento adaptativo (\textit{Adam}, por sus siglas en inglés) \cite{kingma2014adam} y en los últimos propagación de la raíz cuadrada media (\textit{RMSprop}, por sus siglas en inglés) \cite{tieleman2012lecture} con unos valores de tasa de aprendizaje variables.
+Esto se debe a que la simplicidad de ReLU permite agilizar el proceso de entrenamiento y cuando existen muchas capas, la función sigmoide, puede hacer que las neuronas desaparezcan dado que sus valores tienden a 0. La parte final de todo modelo es la función de pérdida y un optimizador; la primera es la encargada de comparar las predicciones con el valor real de los datos, ofreciendo un valor de pérdida, mientras que el optimizador es el encargado de recibir estos valores para reajustar los pesos. Como el problema que se está enfrentando en este trabajo es de clasificación binaria y la salida de la red es una probabilidad es mejor utilizar $binary_crossentropy$ como función de pérdida. Existen otras opciones pero esta es la más utilizada en los modelos donde la salida es un valor de probabilidad como muestra Chollet \cite{10.5555/3203489}. En el caso de los optimizadores se utilizó el algoritmo de optimizaci\'on de momento adaptativo (\textit{Adam} \cite{kingma2014adam}, por sus siglas en inglés) el cual es una mejora de propagación de la raíz cuadrada media (\textit{RMSprop} \cite{tieleman2012lecture}, por sus siglas en inglés) dado que el primero varía a conveniencia el factor de aprendizaje.
 
 Existen dos tipos de redes principales. La que se muestra en la figura \ref{fig:neural_network} se le conoce como alimentación hacia adelante, dado que su estructura es un gráfico dirigido acíclico. Las redes con ciclos reciben el nombre de recurrentes. En ellas la función de las neuronas tiene una dependencia sobre s\'i misma que puede estar basada en el tiempo. Este trabajo se centra en explorar los resultados del primer tipo mencionado en la detección de intrusos por lo que todos los modelos utilizados tienen estructuras ac\'iclicas.
 
@@ -83,7 +85,7 @@ Un problema común entre los algoritmos de aprendizaje de máquina es el sobreaj
 \subsection{Aplicaciones}
 Las redes neuronales artificiales pueden utilizarse para resolver diversos problemas. En la práctica los resultados obtenidos han sido muy buenos. Por lo general se aplican en escenarios donde la entrada puede representada por varios pares de atributos, la salida de la función objetivo puede ser de cualquier tipo, los ejemplos de entrenamiento pueden contener errores, se requieren de largos tiempos de entrenamiento, se requiere de una rápida evaluación de los datos, no es necesario que los humanos comprendan la función objetivo aprendida, entre otras características.
 
-A lo largo de la historia se han utilizado para la solución de disímiles problemas. De forma general, las áreas en las que se aplican son la predicción de funciones \cite{naccha2012prediction}, clasificación \cite{lecun1995comparison}, procesamiento de datos \cite{montano2017redes}, robótica \cite{madrigal2002robots} e ingeniería de control \cite{forero2013control}. La detección de intrusos se puede definir como un problema de clasificación dado que después de analizar los datos se debe decidir si estos son tráfico normal o anómalo, en algunos casos también se especifica el tipo de ataque.
+A lo largo de la historia se han utilizado para la solución de disímiles problemas. De forma general, las áreas en las que se aplican son la predicción de funciones (Naccha \cite{naccha2012prediction}), clasificación (LeCun \cite{lecun1995comparison}), procesamiento de datos (Monta\~no \cite{montano2017redes}), robótica (Madrigal \cite{madrigal2002robots}) e ingeniería de control (Forero \cite{forero2013control}). La detección de intrusos se puede definir como un problema de clasificación dado que después de analizar los datos se debe decidir si estos son tráfico normal o anómalo, en algunos casos también se especifica el tipo de ataque.
 
 \section{Conjunto de datos y características}
 Distintas investigaciones se han enfocado en realizar sistemas de detección de intrusos teniendo como fuente de datos NSL-KDD. En 1998 la Agencia de Proyectos de Investigación Avanzados de Defensa, más conocida por su acrónimo DARPA, recopiló y almacenó la información del tráfico de una red que nombró KDDCup99 llegando a ser uno de los conjuntos de datos públicos que contiene diferentes ataques vigentes en la actualidad y más utilizados por la comunidad científica. NSL-KDD fue diseñado para resolver varios de los problemas existentes en el conjunto original como son la información redundante, tanto en los conjuntos de entrenamiento como de prueba, y la cantidad de datos en cada subconjunto es razonable, lo cual hace comparable y consistentes los resultados de cualquier trabajo y evita tener que escoger un subconjunto aleatorio para los diferentes procesos.
@@ -146,6 +148,49 @@ De forma simplificada, su funcionamiento se puede observar en la tabla siguiente
                    Característica_objetivo, 
                    Características - {A})
 \end{verbatim}
+
+% \begin{center}
+%     \begin{psmatrix}[rowsep=.8cm,colsep=.4cm]
+%       & [name=init,mnode=oval] \parbox{2cm}{\centering $S, C', C$} \\
+%       & [name=root,mnode=circle] r \\
+%       & [name=testap,mnode=dia] \parbox{3.5cm}{\centering $\forall e \in S, e[C'] = (+)$}
+%       & [name=testaps] \psframebox{\parbox{4cm}{\centering Devolver $r$ con la etiqueta (+)}} \\
+%       & [name=testan, mnode=dia] \parbox{3.5cm}{\centering $\forall e \in S, e[C'] = (-)$}
+%       & [name=testans] \psframebox{\parbox{4cm}{\centering Devolver $r$ con la etiqueta (-)}} \\
+%       & [name=testempty, mnode=dia] \parbox{2cm}{\centering $C = \phi$}
+%       & [name=testemptys] \psframebox{\parbox{4cm}{\centering Devolver $r$ con la etiqueta m\'as com\'un de $S[C']$}} \\
+%       & [name=asign] \psframebox{\parbox{4cm}{\centering $A = c | max(GI(S, c))$ \newline $r = A$}} \\
+%       & [name=foreach] \psframebox{\parbox{4cm}{\centering $\forall v \in values(A)$}} \\
+%       & [name=asign2] \psframebox{\parbox{6cm}{\centering Agregar $\{r, r'\}$ a las aristas del árbol para el valor $v$ \newline $S' = \{s | s[A] = v\}$}} \\
+%       & [name=sempty, mnode=dia] $S' = \phi$
+%       & [name=semptys] \psframebox{\parbox{4cm}{\centering $r' =$ nodo con la etiqueta m\'as com\'un de $S[C']$}}
+%       & [name=asign3] \psframebox{\parbox{4cm}{\centering $C = C - \{A\}$}} \\
+  
+%       \ncline{->}{init}{root}
+%       \ncline{->}{root}{testap}
+%       \ncline{->}{testap}{testaps}\naput{Si}
+%       \ncline{->}{testap}{testan}\naput{No}
+%       \ncline{->}{testan}{testans}\naput{Si}
+%       \ncline{->}{testan}{testempty}\naput{No}
+%       \ncline{->}{testempty}{testemptys}\naput{Si}
+%       \ncline{->}{testempty}{asign}\naput{No}
+%       \ncline{->}{asign}{foreach}
+%       \ncline{->}{foreach}{asign2}
+%       \ncline{->}{asign2}{sempty}
+%       \ncline{->}{sempty}{semptys}\naput{Si}
+%       \ncangle[angleA=-90,angleB=-90,armB=1.3cm]{->}{sempty}{asign3}\naput{No}
+%       \ncangle[angleA=90]{->}{semptys}{foreach}
+%       \ncangle[angleA=90]{->}{asign3}{root}
+%     \end{psmatrix}
+%   \end{center}
+\vspace{3cm}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{Images/flow_diagram.png}
+    \caption{Diagrama de flujo de datos para el algoritmo de arboles de decisión.}
+    \label{fig:flow_diagram}
+\end{figure}
 
 Para poder definir cual es la mejor característica que clasifica los ejemplos se utiliza la ganancia de información. Si se tiene un conjunto $S$ de ejemplos, la ganancia de información para la característica $A$ se puede definir como:
 \[GI(S, A) \equiv E(S) - \sum_{v \in Values(A)} \frac{|S_{v}|}{|S|}E(S_{v})\]

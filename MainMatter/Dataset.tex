@@ -1,11 +1,15 @@
 %===================================================================================
 % Chapter: Dataset
 %===================================================================================
-\chapter{Análisis del conjunto de datos}\label{chapter:dataset}
-% \addcontentsline{toc}{chapter}{Análisis del conjunto de datos}
+\chapter*{Capítulo 2. Análisis del conjunto de datos}\label{chapter:dataset}
+\addcontentsline{toc}{chapter}{Capítulo 2. Análisis del conjunto de datos}
 %===================================================================================
+\stepcounter{chapter}
 
-En el proceso de entrenamiento y prueba de los algoritmos de aprendizaje de máquina, el conjunto de datos utilizado es de gran importancia, pero escoger uno lo suficientemente bueno no es tarea fácil. El conjunto KDDCup99 fue elaborado por el MIT Lincoln Lab patrocinado por DARPA en un escenario simulado donde realizaban ataques a la base de las fuerzas aéreas, lo cual tuvo una duración de 9 semanas \cite{mchugh2000testing}. Los datos fueron analizados y separados según el tipo de ataque o tráfico no malicioso de la red. Es uno de los conjuntos públicos disponibles que contiene ataques actuales y más utilizados para la construcción de IDS, lo que facilita la comparación de diferentes trabajos.
+\section{Generalidades}
+En el mundo de la programación existen muchos softwares y lenguajes para el desarrollo y la investigación, seleccionar uno no es trivial. Keras \cite{gulli2017deep} es una biblioteca escrita en Python \cite{lutz2001programming} para el uso y aprendizaje de las redes neuronales. Su popularidad se debe, en parte, a que es una interfaz que ofrece abstracciones intuitivas y de un alto nivel, ya que está diseñada para humanos y no para máquinas. Por su extenso uso por parte de la comunidad científica y por la industria se puede encontrar una abundante documentación lo que acelera el proceso de aprendizaje. La elección de un conjunto de datos para el entrenamiento y la validación de los algoritmos de inteligencia artificial es un proceso aún más complejo. Si los datos no tienen la calidad requerida los algoritmos resultantes pueden no ser efectivos en entornos reales o incluso provocar malos resultados en productos que se conoce su fiabilidad. Para este trabajo se escogió el conjunto de datos NSL-KDD \cite{dhanabal2015study} en el cual intentaron resolver algunos de los problemas en KDDCup99 \cite{tavallaee2009detailed}, este a su vez fue utilizado en el Tercer Concurso Internacional de Herramientas de Minería de Datos y Descubrimiento de Conocimiento (The Third International Knowledge Discovery and Data Mining Tools Competition, en inglés) \cite{stolfocost}. Debido a su robustez, multiples trabajos han utilizado NSL-KDD, brindando una forma de comparar resultados con una gran variedad de algoritmos.
+
+El conjunto KDDCup99 fue elaborado por el MIT Lincoln Lab patrocinado por DARPA en un escenario simulado donde realizaban ataques a la base de las fuerzas aéreas, lo cual tuvo una duración de 9 semanas \cite{mchugh2000testing}. Los datos fueron analizados y separados según el tipo de ataque o tráfico no malicioso de la red. Es uno de los conjuntos públicos disponibles que contiene ataques actuales y más utilizados para la construcción de IDS, lo que facilita la comparación de diferentes trabajos.
 
 \section{Descripción del conjunto de datos}\label{section:dataset_description}
 El conjunto de datos KDDCup99 posee aproximadamente 5 millones de datos los que se dividen en 5 clases:
@@ -13,12 +17,12 @@ El conjunto de datos KDDCup99 posee aproximadamente 5 millones de datos los que 
 \begin{itemize}
     \item Normal: tráfico común que navega por la red como puede ser el acceso a un sitio web o el envío de archivos no maliciosos.
     \item Negación de Servicios (DoS): esto es un ataque que ocupa gran parte del poder de cómputo o la memoria haciendo así que otras peticiones no puedan ser atendidas.
-    \item Probing: un atacante escanea la red para ganar información que pueda explotar en el momento de infiltrarse en esta.
+    \item Ataque de sondeo (Probing): un atacante escanea la red para ganar información que pueda explotar en el momento de infiltrarse en esta.
     \item Ataque remoto a un equipo local (R2L): el atacante envía paquetes a la red con el objetivo de explotar alguna vulnerabilidad disponible y ganar acceso local.
-    \item User to Root (U2R): el atacante accede a la red desde una cuenta de usuario común y explota las vulnerabilidades existentes para ganar acceso como administrador en el sistema.
+    \item Usuario a administrador (U2R): el atacante accede a la red desde una cuenta de usuario común y explota las vulnerabilidades existentes para ganar acceso como administrador en el sistema.
 \end{itemize}
 
-De igual forma, cada paquete contiene 41 características que pueden ser continuas o discretas. Estas están divididas en 4 categorías:
+De igual forma, cada paquete contiene 41 características, las que se muestran en la figura \ref{fig:features}, que pueden ser continuas o discretas. Estas están divididas en 4 categorías:
 
 \begin{itemize}
     \item Características básicas que están derivadas de los encabezados de los paquetes sin inspeccionar los datos transmitidos.
@@ -27,9 +31,16 @@ De igual forma, cada paquete contiene 41 características que pueden ser continu
     \item Características basadas en el tráfico del host.
 \end{itemize}
 
-Este conjunto de datos tiene algunos problemas como el contenido de datos redundantes causando que los algoritmos de aprendizaje tengan una inclinación por los datos más frecuentes, el número de entradas para elaborar un conjunto de test puede variar en cada trabajo dado que el conjunto de datos no está separado, entre otros. Para eliminar algunos de estos errores se elaboró el conjunto NSL-KDD con un total de 1.1 millones de datos. A pesar de los esfuerzos, este aún sufre de algunos problemas tratados por McHugh \cite{mchugh2000testing} y no es una representación perfecta del contenido real en las redes. Por la falta de conjuntos de datos públicos, este puede ser un buen medidor para ayudar a las diferentes investigaciones y poderlas comparar entre sí. 
+\begin{figure}[hb]
+    \centering
+    \includegraphics[width=.6\linewidth]{Images/features.png}
+    \caption{Características de los datos.}
+    \label{fig:features}
+\end{figure}
 
-En adición, cada dato contiene un nivel de dificultad. Para lograr este objetivo se entrenaron 7 algoritmos diferentes, cada uno 3 veces, y a cada dato que aceptaron se le incrementó en uno el valor de dificultad, siendo 21 el valor máximo representando el nivel de dificultad más bajo. El conjunto de datos en su totalidad consta de 8 archivos:
+Este conjunto de datos tiene algunos problemas como el contenido de datos redundantes causando que los algoritmos de aprendizaje tengan una inclinación por los datos más frecuentes, el número de entradas para elaborar un conjunto de test puede variar en cada trabajo dado que el conjunto de datos no está separado, entre otros. Para eliminar algunos de estos errores se elaboró el conjunto NSL-KDD con un total de 148517  datos. A pesar de los esfuerzos, este aún sufre de algunos problemas tratados por McHugh \cite{mchugh2000testing} y no es una representación perfecta del contenido real en las redes. Por la falta de conjuntos de datos públicos, este puede ser un buen medidor para ayudar a las diferentes investigaciones y poderlas comparar entre sí. 
+
+En adición, este conjunto de datos se elaboró con un nivel de dificultad para cada ejemplo. Para lograr este objetivo se entrenaron 7 algoritmos diferentes, cada uno 3 veces, y a cada dato que aceptaron se le incrementó en uno el valor de dificultad, siendo 21 el valor máximo representando el nivel de dificultad más bajo. El conjunto de datos en su totalidad consta de 8 archivos:
 
 \begin{itemize}
     \item KDDTrain+.arff : el conjunto de entrenamiento completo con los datos clasificados en normal y anómalos.
@@ -42,16 +53,16 @@ En adición, cada dato contiene un nivel de dificultad. Para lograr este objetiv
     \item KDDTest-21.txt : subconjunto de KDDTest+.txt que no contiene los datos con dificultad 21 de 21.
 \end{itemize}
 
-\begin{table}[h]
+\begin{table}[h!t]
     \begin{center}
-        \caption{Cantidad de datos en cada subconjunto.}
-
         \label{tab:len_datasets}
         \begin{tabular}{c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-        \textbf{KDDTrain+} & \textbf{KDDTrain+\_20Percent} & \textbf{KDDTest+} & \textbf{KDDTest-21}\\
-        \hline
-        125973 & 25192 & 22544 & 11850\\
+            \textbf{KDDTrain+} & \textbf{KDDTrain+\_20Percent} & \textbf{KDDTest+} & \textbf{KDDTest-21}\\
+            \hline
+            125973 & 25192 & 22544 & 11850\\
         \end{tabular}
+
+        \caption{Cantidad de datos en cada subconjunto.}
     \end{center}
 \end{table}
 
@@ -68,8 +79,6 @@ Uno de los métodos más utilizados para lograr este objetivo es el de bosques a
 \section{Clasificación}
 \begin{table}[b]
     \begin{center}
-        \caption{Asociación de los tipos de ataques a sus categorías.}
-        
         \label{tab:class}
         \begin{tabular}{l|l} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
         \textbf{Categorías} & \textbf{Tipos de ataques}\\
@@ -83,6 +92,8 @@ Uno de los métodos más utilizados para lograr este objetivo es el de bosques a
         U2R & buffer overflow, loadmodule, perl, rootkit, httptunnel,\\
         & ps, sqlattack, xterm\\
         \end{tabular}
+
+        \caption{Asociación de los tipos de ataques a sus categorías.}
     \end{center}
 \end{table}
 
@@ -90,10 +101,8 @@ La clasificación es el proceso de predicción de los datos luego de que el algo
 
 A pesar de que este conjunto de datos tiene grandes virtudes, no es perfecto. Algo que lo perjudica son las cantidades de datos en cada una de las categorías de ataques. Como muestra la tabla \ref{tab:atk_counts} hay tipos de ataques que poseen una mayor cantidad de entradas lo cual puede causar una inclinación en los algoritmos de aprendizaje de máquina.
 
-\begin{table}[h]
+\begin{table}[h!t]
     \begin{center}
-        \caption{Distribución de los datos en los subconjuntos de entrenamiento y prueba.}
-        
         \label{tab:atk_counts}
         \begin{tabular}{c|c|c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
         \textbf{} & \textbf{Normal} & \textbf{DoS} & \textbf{Probe} & \textbf{U2R} & \textbf{R2L} & \textbf{Total}\\
@@ -101,23 +110,24 @@ A pesar de que este conjunto de datos tiene grandes virtudes, no es perfecto. Al
         \textbf{Train} & 67343 & 45927 & 11656 & 52 & 995 & 125973\\
         \textbf{Test} & 9711 & 7458 & 2421 & 200 & 2754 & 22544\\
         \end{tabular}
+
+        \caption{Distribución de los datos en los subconjuntos de entrenamiento y prueba.}
     \end{center}
 \end{table}
 
 \section{Conjunto de datos original}
 Para las primeras pruebas se utilizó el conjunto de datos en su forma original. Los procesos de entrenamiento y validación se llevaron a cabo particionando el subconjunto KDDTrain en un 80\% y 20\% para cada una de las tareas respectivamente. En la fase de prueba se le aplicaron a los modelos ambos conjuntos, KDDTest+ y KDDTest-21, debido a la diferencia de dificultad entre estos se puede tener una mejor estimación de los resultados que se obtendrán en condiciones reales. Esta diferencia se debe a la forma en que se elaboraron, KDDTest+ en su mayoría posee datos de ataques mostrando una mayor relación de casos anómalos contra normales que KDDTrain. Por otra parte, KDDTest-21 es un subconjunto de KDDTest+ que solo posee datos con dificultad menor o igual a 20, excluyendo así los mas fáciles. Para una mejor noción de las diferencias de dificultades en la figura \ref{fig:diff_distribution} se muestra la distribución de los datos en los conjuntos KDDTrain y KDDTest según su dificultad.
 
-% TODO: ponerle los números de las cantidades a las gráficas
 \begin{figure}
     \centering
-    \subfigure{\label{fig:kddtrain_distribution}\includegraphics[width=.45\linewidth]{Images/distribution_train.png}}
-    \subfigure{\label{fig:kddtest_distribution}\includegraphics[width=.45\linewidth]{Images/distribution_test.png}}
+    \subfigure{\label{fig:kddtrain_distribution}\includegraphics[width=.48\linewidth]{Images/distribution_train.png}}
+    \subfigure{\label{fig:kddtest_distribution}\includegraphics[width=.48\linewidth]{Images/distribution_test.png}}
 
-    \caption{Distribución de datos por dificultad en los conjuntos KDDTrain y KDDTest respectivamente.}
+    \caption{Distribución de datos por dificultad en los conjuntos KDDTrain y KDDTest respectivamente. En el eje X rangos de dificultad y en el eje Y cantidad de datos con dicha dificultad.}
     \label{fig:diff_distribution}
 \end{figure}
 
-Para una mayor precisión en los resultados se utilizó el método k-fold \cite{10.5555/3203489}. Este consiste en dividir el conjunto de entrenamiento en $k$ particiones, creando $k$ modelos idénticos y entrenando el i-esimo con las $k - 1$ restantes mientras que se evalúan con la i-esima partición. Luego de obtener los $k$ resultados se promedian. El valor de $k$ escogido fue de 5 (usualmente se trabaja con 5 o 4) con 100 epochs y un tamaño de batch de 64. Al comienzo de este proceso se desordenaron los datos del conjunto de entrenamiento de modo aleatorio.
+Para una mayor precisión en los resultados se utilizó el método k-fold \cite{10.5555/3203489}. Este consiste en dividir el conjunto de entrenamiento en $k$ particiones, creando $k$ modelos idénticos y entrenando el i-\'esimo con las $k - 1$ restantes mientras que se evalúan con la i-\'esima partición. Luego de obtener los $k$ resultados se promedian. El valor de $k$ escogido fue de 5 (usualmente se trabaja con 5 o 4) con 100 epochs y un tamaño de batch de 64. Al comienzo de este proceso se desordenaron los datos del conjunto de entrenamiento de modo aleatorio.
 
-\section{Conjunto de datos modificado}
-A pesar de que loas pruebas y los resultados aquí obtenidos se desarrollan bajo un entorno de laboratorio, el producto final esta destinado al uso en redes reales. En esas condiciones, aunque el modelo debe comportarse correctamente ante datos nuevos que no observó en su fase de entrenamiento, a este se le van a mostrar la mayor variedad de datos para que posea un mejor conocimiento. Por estas razones se decidió unificar el conjunto KDDTrain y KDDTest en uno, desordenar los datos de modo aleatorio y luego volver a particionar este en un 80\% y 20\% para las fases de entrenamiento y prueba. Con el objetivo de obtener una mejor estimación del comportamiento de los modelos, este proceso se realizó 10 veces, luego se promediaron todos los resultados y esta fue la cifra que se tuvo en cuenta. Cabe destacar que en cada una de las iteraciones se unificó el conjunto de datos, se desordenó y se volvió a particionar.
+\section{Conjunto de datos modificado}\label{section:modified_dataset}
+A pesar de que las pruebas y los resultados aquí obtenidos se desarrollaron en un entorno de laboratorio, el producto final está destinado al uso en redes reales. En esas condiciones, aunque el modelo debe comportarse correctamente ante datos nuevos que no observó en su fase de entrenamiento, a este se le va a mostrar la mayor variedad de datos posibles para que posea un mejor conocimiento. Por estas razones se decidió unificar el conjunto KDDTrain y KDDTest en uno, desordenar los datos de modo aleatorio y luego volver a particionar este en un 80\% y 20\% para las fases de entrenamiento y prueba. Con el objetivo de obtener una mejor estimación del comportamiento de los modelos, este proceso se realizó 10 veces, luego se promediaron todos los resultados y esta fue la cifra que se tuvo en cuenta. Cabe destacar que en cada una de las iteraciones se unificó el conjunto de datos, se desordenó y se volvió a particionar.
